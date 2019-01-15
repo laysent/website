@@ -36,6 +36,7 @@
   "devDependencies": {
     "eslint": "^4.19.1",
     "eslint-plugin-react": "^7.11.1",
+    "lint-md": "^0.1.0",
     "prettier": "^1.14.2"
   },
   "homepage": "https://laysent.github.io/blog",
@@ -50,7 +51,9 @@
   },
   "scripts": {
     "dev": "gatsby develop",
-    "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint:js": "eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint:md": "lint-md README.md content/blog/*.md",
+    "lint": "npm run lint:js && npm run lint:md",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
     "start": "npm run develop",
