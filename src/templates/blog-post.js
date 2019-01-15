@@ -10,11 +10,13 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.markdownRemark
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    const { date, modified, title, description } = post.frontmatter;
 
+    const hasBeenModified = modified && (modified !== date);
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.frontmatter.description} />
-        <h1>{post.frontmatter.title}</h1>
+        <SEO title={title} description={description} />
+        <h1>{title}</h1>
         <p
           style={{
             ...scale(-1 / 5),
@@ -23,7 +25,8 @@ class BlogPostTemplate extends React.Component {
             marginTop: rhythm(-1),
           }}
         >
-          {post.frontmatter.date}
+          {date}
+          {hasBeenModified && ` • (modified: ${modified})`}
         </p>
         <div dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr
@@ -77,6 +80,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        modified(formatString: "MMMM DD, YYYY")
         description
       }
     }
