@@ -19,9 +19,10 @@ class BlogIndex extends React.Component {
         />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
+          const date = node.frontmatter.date;
 
           return (
-            <div key={node.fields.slug}>
+            <article key={node.fields.slug}>
               <h3
                 style={{
                   marginBottom: rhythm(1 / 4),
@@ -31,10 +32,10 @@ class BlogIndex extends React.Component {
                   {title}
                 </Link>
               </h3>
-              <small lang="en">{node.frontmatter.date}</small>
+              <small><time dateTime={date}>{date}</time></small>
               <small lang="en"> • {node.timeToRead}min to read</small>
               <p dangerouslySetInnerHTML={{ __html: node.frontmatter.description }} />
-            </div>
+            </article>
           )
         })}
       </Layout>
@@ -60,7 +61,7 @@ export const pageQuery = graphql`
           }
           timeToRead
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "YYYY-MM-DD")
             title
             description
           }

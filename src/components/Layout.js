@@ -11,60 +11,71 @@ class Layout extends React.Component {
 
     if (location.pathname === rootPath) {
       header = (
-        <h1
-          style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
-            marginTop: 0,
-          }}
-        >
-          <Link
+        <header>
+          <h1
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
+              ...scale(1.5),
+              marginBottom: rhythm(1.5),
+              marginTop: 0,
             }}
-            to={`/`}
           >
-            {title}
-          </Link>
-        </h1>
+            <Link
+              style={{
+                boxShadow: `none`,
+                textDecoration: `none`,
+                color: `inherit`,
+              }}
+              to={`/`}
+            >
+              {title}
+            </Link>
+          </h1>
+        </header>
       )
     } else {
       header = (
-        <h3
-          style={{
-            marginTop: 0,
-          }}
-        >
-          <Link
+        <nav>
+          <h3
             style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
+              marginTop: 0,
             }}
-            to={`/`}
           >
-            {title}
-          </Link>
-        </h3>
+            <Link
+              style={{
+                boxShadow: `none`,
+                textDecoration: `none`,
+                color: `inherit`,
+              }}
+              to={`/`}
+            >
+              {title}
+            </Link>
+          </h3>
+        </nav>
       )
     }
     return (
-      <div
+      <main
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
           maxWidth: rhythm(28),
           padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
         }}
+        itemScope
+        itemType="http://schema.org/Blog"
       >
         {header}
         {children}
         <footer>
-          © {new Date().getFullYear()} LaySent
+          <span>© </span>
+          <span itemProp="copyrightYear">{new Date().getFullYear()}</span>
+          <span> </span>
+          <span itemProp="author" itemScope itemType="http://schema.org/Person">
+            <span itemProp="name">LaySent</span>
+          </span>
         </footer>
-      </div>
+      </main>
     )
   }
 }

@@ -16,49 +16,58 @@ class BlogPostTemplate extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title={title} description={description} />
-        <h1>{title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
-          {date}
-          {hasBeenModified && ` • (modified: ${modified})`}
-        </p>
-        <div dangerouslySetInnerHTML={{ __html: post.html }} />
+        <article itemScope itemType="http://schema.org/BlogPosting">
+          <header>
+            <h1 itemProp="headline">{title}</h1>
+            <p
+              style={{
+                ...scale(-1 / 5),
+                display: `block`,
+                marginBottom: rhythm(1),
+                marginTop: rhythm(-1),
+              }}
+            >
+              <time itemProp="datePublished" dateTime={date}>{date}</time>
+              {hasBeenModified && (
+                <span> • (modified: <time itemProp="dateModified" dateTime={modified}>{modified}</time>)</span>
+              )}
+              <span itemScope itemType="http://schema.org/Person" itemProp="author"> • by <span itemProp="name">LaySent</span></span>
+            </p>
+          </header>
+          <div dangerouslySetInnerHTML={{ __html: post.html }} itemProp="articleBody" />
+        </article>
         <hr
           style={{
             marginBottom: rhythm(1),
           }}
         />
 
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={previous.fields.slug} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={next.fields.slug} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
+        <nav>
+          <ul
+            style={{
+              display: `flex`,
+              flexWrap: `wrap`,
+              justifyContent: `space-between`,
+              listStyle: `none`,
+              padding: 0,
+            }}
+          >
+            <li>
+              {previous && (
+                <Link to={previous.fields.slug} rel="prev">
+                  ← {previous.frontmatter.title}
+                </Link>
+              )}
+            </li>
+            <li>
+              {next && (
+                <Link to={next.fields.slug} rel="next">
+                  {next.frontmatter.title} →
+                </Link>
+              )}
+            </li>
+          </ul>
+        </nav>
       </Layout>
     )
   }
@@ -79,8 +88,8 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
-        modified(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY-MM-DD")
+        modified(formatString: "YYYY-MM-DD")
         description
       }
     }
