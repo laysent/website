@@ -1,29 +1,32 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from 'react';
+import { graphql } from 'gatsby';
 
 import Posts from '../components/posts';
 
-class BlogIndex extends React.Component {
+class CategoryTemplate extends React.Component {
   render() {
     return (
       <Posts
         {...this.props}
-        title="All posts"
+        title={`${this.props.pageContext.category} Posts`}
       />
-    );
+    )
   }
 }
 
-export default BlogIndex
+export default CategoryTemplate;
 
 export const pageQuery = graphql`
-  query {
+  query Category($category: String!) {
     site {
       siteMetadata {
         title
       }
     }
-    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMarkdownRemark(
+      sort: { fields: [frontmatter___date], order: DESC }
+      filter: { frontmatter:  { category: { eq: $category } } }
+    ) {
       edges {
         node {
           excerpt
@@ -35,11 +38,9 @@ export const pageQuery = graphql`
             date(formatString: "YYYY-MM-DD")
             title
             description
-            tags
-            category
           }
         }
       }
     }
   }
-`
+`;
