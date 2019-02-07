@@ -15,7 +15,7 @@ class BlogPostTemplate extends React.Component {
     const hasBeenModified = modified && (modified !== date);
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title={title} description={description} />
+        <SEO title={title} description={description} location={this.props.location} />
         <article itemScope itemType="http://schema.org/BlogPosting">
           <header>
             <h1 itemProp="headline">{title}</h1>

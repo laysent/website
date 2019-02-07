@@ -20,6 +20,7 @@ class Posts extends React.Component {
         <SEO
           title={title}
           keywords={['JavaScript', 'Web', 'Blog', 'LaySent']}
+          location={this.props.location}
         />
         {posts.map(({ node }) => {
           const title = node.frontmatter.title || node.fields.slug
