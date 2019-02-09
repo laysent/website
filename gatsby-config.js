@@ -17,6 +17,13 @@ module.exports = {
         name: `blog`,
       },
     },
+    process.env.NODE_ENV === 'production' ? undefined : {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/draft`,
+        name: `draft`,
+      },
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -83,5 +90,5 @@ module.exports = {
       },
     },
     `gatsby-plugin-meta-redirect`,
-  ],
+  ].filter(_ => _),
 }
