@@ -1,7 +1,7 @@
 ---
 title: 使用 N-API 移植现有 C 语言库
 date: 2019-01-19
-modified: 2019-01-19
+modified: 2019-02-10
 tags: Node.js, JavaScript
 category: Node.js
 description: 如何使用 N-API 与 node-gyp，将一个现有的 C 语言库移植为 Node.js 可直接运行的 C/C++ 插件
@@ -9,7 +9,7 @@ description: 如何使用 N-API 与 node-gyp，将一个现有的 C 语言库移
 
 本文主要介绍将 Skype 开源的 SILK v3 解码器从 C 语言库移植到 Node.js 环境的流程，主要用到了 node-gyp 以及 Node.js 提供的 N-API。移植后的包可以在[这里](https://www.npmjs.com/package/silk-sdk)找到 ，同时在 [GitHub](https://github.com/laysent/silk-sdk) 开源了代码。
 
-# 目的
+## 目的
 
 原 C 语言库的目录如下
 
@@ -20,7 +20,7 @@ description: 如何使用 N-API 与 node-gyp，将一个现有的 C 语言库移
 
 这次主要需要做的，就是将 `api` 目录（在原库中，为 `test` 目录）下的三个 CLI 功能以 C/C++ 插件的形式，提供给 Node.js 直接调用。
 
-# 创建项目
+## 创建项目
 
 在 `package.json` 中，需要配置 gypfile 并设置为 `true`，以指明程序去寻找 `binding.gyp` 文件。scripts 中的 install 命令，会在 npm 包安装完之后进行，用于将源文件编译成平台相关的二进制包，用于后续的使用。具体如下：
 
@@ -63,7 +63,7 @@ node-gyp clean configure build
 
 然而，此时虽然编译可以成功，但是由于没有公开任何接口，引用编译结果还什么都不能做。
 
-# 公开接口
+## 公开接口
 
 对于 JavaScript 的代码来说，可以使用 `module.exports = xxx` 将接口公开；对于 C/C++ 的插件来说，也有类似的处理方法。参考的代码如下：
 
@@ -126,7 +126,7 @@ const silk = require('sdk-silk');
 silk.decode();
 ```
 
-## 读取参数
+### 读取参数
 
 以下的代码，可以从给定的 `napi_callback_info` 中提取出参数列表：
 
@@ -151,7 +151,7 @@ if (argc < 1) {
 
 需要注意的是，从 `napi_get_cb_info` 获取到的结果，都是 `napi_value` 类型的。这里，一般需要转化为 C 中一般使用的类型，以提供给已有的 C 语言库来进行后续的调用。
 
-### 值参数转化
+#### 值参数转化
 
 对于一般的非对象参数，转化的方法比较简单。这里以 Buffer 类型为例：
 
@@ -168,7 +168,7 @@ assert(status == napi_ok);
 
 其他的值参数转化，可以参考[官方的 API 文档](https://nodejs.org/api/n-api.html#n_api_functions_to_convert_from_n_api_to_c_types)。
 
-### 对象参数
+#### 对象参数
 
 从对象参数中提取出具体的属性值，可以参考如下代码：
 
@@ -201,7 +201,7 @@ if (hasProperty) {
 
 这里需要注意的是，`napi_has_property` 与 `napi_get_property` 都不直接接受字符串作为属性名，需要现将属性名转化为 `napi_value` 类型之后才可以使用（参考上述代码的高亮标注行）。直接使用字符串作为属性名参数的话，程序会出错。
 
-## 返回结果
+### 返回结果
 
 与获取参数类似，C 中的基础类型也不能直接作为返回值，需要使用 N-API 提供的接口进行转化。下面展示如何将布尔值转化会 JavaScript 中可以识别的布尔值：
 
@@ -230,7 +230,7 @@ assert(status == napi_ok);
 return result;
 ```
 
-# JavaScript 层的封装
+## JavaScript 层的封装
 
 在完成了 C 插件部分的代码之后，还需要用 JavaScript 对代码做一层封装。这里主要是出于两个方面的考虑：
 

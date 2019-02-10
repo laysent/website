@@ -1,7 +1,7 @@
 ---
 title: Subresource Integrity
 date: 2019-01-06
-modified: 2019-01-06
+modified: 2019-02-10
 tags: Web, JavaScript
 category: Web
 description: Subresource Integrity (SRI) 的基本用法、目的、行为，以及配合 Preload，Prefetch 等一同使用时的注意事项
@@ -11,7 +11,7 @@ description: Subresource Integrity (SRI) 的基本用法、目的、行为，以
 
 当前，大量的前端引用资源文件是放在 CDN 上进行加速的。因为文件不存放在自己的服务器上，这些文件的安全性实际上是交由 CDN 来保证的。为了防止这些资源文件被篡改造成的安全问题，integrity 提供了浏览器层面的资源文件校对功能，以确保真正使用到的资源文件都是没有被篡改的（如插入挖矿代码）。
 
-# 使用
+## 使用
 
 （[在线演示](https://laysent.github.io/subresource-integrity-demo/integrity.html)）
 
@@ -27,21 +27,21 @@ description: Subresource Integrity (SRI) 的基本用法、目的、行为，以
 
 integrity 属性，主流浏览器都是支持的，包括最新版的 Chrome，Firefox，Edge，Safari，Opera 等。但是 Internet Explore 不支持。具体的支持列表见 <https://caniuse.com/#search=sri>。
 
-## integrity
+### integrity
 
 在上面的例子中，`sha384-` 指明了 hash 值的具体类型（目前可以使用的值包括 `sha256`, `sha384`, `sha512`）。之后的字符串是具体的 hash 值。integrity 属性可以一次性指定多个 hash 值，用空格分隔就可以了。例如 `integrity="sha256-xxx sha384-xxx sha512-xxx"`。需要注意的是，当多个 hash 值一同给出时，浏览器会以 `sha512` > `sha384` > `sha256` 的顺序选择提供结果中强度最大的来使用。如果这个结果是正确的，那么验证通过；否则验证失败，不论其他的结果是否是正确的。
 
 举例来说，如果 `integrity="sha256-correct sha512-wrong"` 是提供的 integrity，那么 `sha512` 会被浏览器采纳使用。而由于 `sha512` 的结果是错误的，所以资源加载失败，此时 `sha256` 的结果并没有被考虑。
 
-## CORS
+### CORS
 
 在使用 integrity 的时候，往往需要配合 `crossorigin="anonymous"` 一同使用。这是因为，integrity 的主要目的，是为了确保第三方资源加载时的正确性。而浏览器如果需要检查一个跨域文件的 hash 值是否是正确的，需要资源在加载的时候，以 `crossorigin="anonymous"` 方式声明，同时需要对方服务器的确认（即，在 HTTP 头中提供正确的 `allow-control-allow-origin`）。如果加载的资源文件不存在跨域问题，那么这里的 `crossorigin="anonymous"` 是非必须的。但是在非跨域情况下，integrity 的设置也没有太大意义。
 
-# 行为
+## 行为
 
 当遇到资源文件的加载带有 integrity 属性时，浏览器会首先下载这个资源文件，然后对资源文件的内容进行比对。如果比对成功，那么这个脚本/样式文件会被执行；如果比对失败，那么文件不会被执行，`network error` 会被抛出。这里，在 console 中可以看到具体的报错信息。但是出于隐私的考虑，在 JavaScript 代码中，报错不会提供详细的信息，只会告知 `network error`。
 
-## Preload
+### Preload
 
 （[在线演示](https://laysent.github.io/subresource-integrity-demo/integrity-and-preload.html)）
 
@@ -53,13 +53,13 @@ integrity 属性，主流浏览器都是支持的，包括最新版的 Chrome，
 
 另外，在跨域的请求中，如果实际请求资源的时候有 `crossorigin="anonymous"`，那么 preload 需要提供同样的 `crossorigin="anonymous"`，否则资源文件依旧会被请求两次，无论是否有 integrity。
 
-## Prefetch
+### Prefetch
 
 （[在线演示](https://laysent.github.io/subresource-integrity-demo/integrity-and-prefetch.html)）
 
 prefetch 的优先级比 preload 低很多，行为也有所不同。对于 prefetch 来说，下载完成的文件会被存储在 cache 中，当实际文件请求到的时候，会生成一次请求，并从 cache 中把文件取出来使用。是否有 integrity 对此行为不会造成影响。
 
-# 生成
+## 生成
 
 使用下面的 node.js 代码可以生成具体文件对应的 hash 值：
 
@@ -71,7 +71,7 @@ crypto.createHash('sha256').update(content, 'utf8').digest('base64');
 
 同样，也可以使用 [Web App](https://laysent.github.io/sri-hash-generator/) 来在线生成文件的 integrity 值。
 
-# Content-Security-Policy
+## Content-Security-Policy
 
 （[在线演示](https://laysent.github.io/subresource-integrity-demo/content-security-policy.html)）
 
@@ -97,13 +97,13 @@ crypto.createHash('sha256').update(content, 'utf8').digest('base64');
 
 Firefox 和 Safari 暂时不支持该功能。
 
-# 注意
+## 注意
 
 在使用 `webpack` 的 `hot-reload` 功能，或是使用 proxy 服务器对资源文件进行替换的时候，如果有 integrity 会导致使用失败。`hot-reload` 需要保证每次资源的变动都重新计算出正确的 integrity 值，才能保证使用；proxy 服务器需要首先修改 html 中的内容（比如直接去掉 integrity，然后才能保证之后修改资源文件依然可以使用）。
 
 `webpack` 可以使用 `webpack-subresource-integrity` 插件来完成自动编译 integrity 的功能：<https://github.com/waysact/webpack-subresource-integrity>
 
-# 参考
+## 参考
 
 <https://developer.mozilla.org/en-US/docs/Web/Security/Subresource_Integrity>
 
