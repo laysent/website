@@ -13,10 +13,10 @@ description: 如何使用 N-API 与 node-gyp，将一个现有的 C 语言库移
 
 原 C 语言库的目录如下
 
-  + api：存放了开放接口的三个对应文件，分别是 encode，decode 和 compare
-  + doc：文档
-  + interface：SDK 公开的 API 对应头文件存放位置
-  + src：SDK 代码的存放位置
++ api：存放了开放接口的三个对应文件，分别是 encode，decode 和 compare
++ doc：文档
++ interface：SDK 公开的 API 对应头文件存放位置
++ src：SDK 代码的存放位置
 
 这次主要需要做的，就是将 `api` 目录（在原库中，为 `test` 目录）下的三个 CLI 功能以 C/C++ 插件的形式，提供给 Node.js 直接调用。
 
@@ -129,7 +129,6 @@ silk.decode();
 ### 读取参数
 
 以下的代码，可以从给定的 `napi_callback_info` 中提取出参数列表：
-
 
 ```c
 size_t argc;

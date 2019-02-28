@@ -316,7 +316,6 @@ public String s() {
 
 根据以上的分析结果，可以把这部分对应的 Java 代码用 JavaScript 再写一遍：
 
-
 ```javascript
 const crypto = require('crypto');
 

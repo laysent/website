@@ -47,7 +47,7 @@ integrity 属性，主流浏览器都是支持的，包括最新版的 Chrome，
 
 根据 <https://github.com/w3c/preload/issues/127> 和 <https://github.com/w3c/webappsec-subresource-integrity/issues/26> 的描述，Chrome 浏览器在处理 preload 和 integrity 配合使用的资源上存在问题。简单来说，当 preload 加载的时候，资源就已经被编译解析了，而原始的文本资源被丢弃。因此，当浏览器之后运行到具体的资源加载语句的时候，由于没有了原始文本，就无法计算具体的 hash 值，也就无法确认 integrity 是否正确，只能不得已重新请求一次。而最终使用的是第二次请求的资源，preload 的结果会被丢弃，Chrome 也会在 console 中给出 warning。
 
-  > A preload for 'xxx' is found, but is not used due to an integrity mismatch.
+> A preload for 'xxx' is found, but is not used due to an integrity mismatch.
 
 试验了一下，Safari 似乎没有相同的问题。Firefox 本身还不支持 preload。如果在 `about:config` 中将 Firefox 的 `network.preload` 功能打开，那么 Firefox 的表现行为看上去和 Chrome 是相同的，但由于没有足够的信息，尚不清楚实际上是否和 Chrome 一样，最开始 preload 的资源被遗弃了。
 
@@ -91,7 +91,7 @@ crypto.createHash('sha256').update(content, 'utf8').digest('base64');
 
 这个 HTTP 头的校验功能，在当前版本（Chrome 70）中还未被默认打开。这意味着，即使请求带有以上任何一种 HTTP 头，Chrome 也不会对 HTML 中引用的资源文件做强制校验。当 Chrome 监测到以上的任意一种 HTTP 头之后，会在 console 中输出：
 
-  > The Content-Security-Policy directive 'require-sri-for' is implemented behind a flag which is currently disabled.
+> The Content-Security-Policy directive 'require-sri-for' is implemented behind a flag which is currently disabled.
 
 如果需要让 Chrome 运行检测，需要访问 <chrome://flags/#enable-experimental-web-platform-features>，并打开实验功能。
 

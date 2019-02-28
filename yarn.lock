@@ -1230,10 +1230,6 @@ assign-symbols@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/assign-symbols/-/assign-symbols-1.0.0.tgz#59667f41fadd4f20ccbc2bb96b8d4f7f78ec0367"
 
-ast-plugin@^0.0.7:
-  version "0.0.7"
-  resolved "http://registry.npm.taobao.org/ast-plugin/download/ast-plugin-0.0.7.tgz#a88300d2100f4321e5c2147f84076336746cbd89"
-
 ast-types-flow@0.0.7, ast-types-flow@^0.0.7:
   version "0.0.7"
   resolved "https://registry.yarnpkg.com/ast-types-flow/-/ast-types-flow-0.0.7.tgz#f70b735c6bca1a5c9c22d982c3e39e7feba3bdad"
@@ -2205,6 +2201,10 @@ camelcase@^4.0.0, camelcase@^4.1.0:
   version "4.1.0"
   resolved "https://registry.yarnpkg.com/camelcase/-/camelcase-4.1.0.tgz#d545635be1e33c542649c69173e5de6acfae34dd"
 
+camelcase@^5.0.0:
+  version "5.0.0"
+  resolved "http://registry.npm.taobao.org/camelcase/download/camelcase-5.0.0.tgz#03295527d58bd3cd4aa75363f35b2e8d97be2f42"
+
 caniuse-api@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/caniuse-api/-/caniuse-api-3.0.0.tgz#5e4d90e2274961d46291997df599e3ed008ee4c0"
@@ -2378,7 +2378,7 @@ cli-boxes@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/cli-boxes/-/cli-boxes-1.0.0.tgz#4fa917c3e59c94a004cd61f8ee509da651687143"
 
-cli-cursor@^2.0.0, cli-cursor@^2.1.0:
+cli-cursor@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cli-cursor/-/cli-cursor-2.1.0.tgz#b35dac376479facc3e94747d41d0d0f5238ffcb5"
   dependencies:
@@ -2426,6 +2426,10 @@ clone-response@1.0.2:
   resolved "https://registry.yarnpkg.com/clone-response/-/clone-response-1.0.2.tgz#d1dc973920314df67fbeb94223b4ee350239e96b"
   dependencies:
     mimic-response "^1.0.0"
+
+co@3.1.0:
+  version "3.1.0"
+  resolved "http://registry.npm.taobao.org/co/download/co-3.1.0.tgz#4ea54ea5a08938153185e15210c68d9092bc1b78"
 
 co@^4.6.0:
   version "4.6.0"
@@ -2508,7 +2512,7 @@ command-exists@^1.2.2:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/command-exists/-/command-exists-1.2.8.tgz#715acefdd1223b9c9b37110a149c6392c2852291"
 
-commander@^2.11.0, commander@^2.16.0, commander@^2.18.0, commander@^2.19.0:
+commander@^2.11.0, commander@^2.16.0, commander@^2.18.0:
   version "2.19.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.19.0.tgz#f6198aa84e5b83c46054b94ddedbfed5ee9ff12a"
 
@@ -2572,7 +2576,7 @@ concat-map@0.0.1:
   version "0.0.1"
   resolved "https://registry.yarnpkg.com/concat-map/-/concat-map-0.0.1.tgz#d8a96bd77fd68df7793a73036a3ba0d5405d477b"
 
-concat-stream@^1.5.0, concat-stream@^1.6.0:
+concat-stream@^1.5.0, concat-stream@^1.5.1, concat-stream@^1.6.0:
   version "1.6.2"
   resolved "https://registry.yarnpkg.com/concat-stream/-/concat-stream-1.6.2.tgz#904bdf194cd3122fc675c77fc4ac3d4ff0fd1a34"
   dependencies:
@@ -4075,6 +4079,12 @@ fastparse@^1.1.1:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/fastparse/-/fastparse-1.1.2.tgz#91728c5a5942eced8531283c79441ee4122c35a9"
 
+fault@^1.0.0, fault@^1.0.1, fault@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/fault/download/fault-1.0.2.tgz#c3d0fec202f172a3a4d414042ad2bb5e2a3ffbaa"
+  dependencies:
+    format "^0.2.2"
+
 faye-websocket@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/faye-websocket/-/faye-websocket-0.10.0.tgz#4e492f8d04dfb6f89003507f6edbf2d501e7c6f4"
@@ -4308,6 +4318,10 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.1"
     readable-stream "^2.0.4"
 
+fn-name@^2.0.1:
+  version "2.0.1"
+  resolved "http://registry.npm.taobao.org/fn-name/download/fn-name-2.0.1.tgz#5214d7537a4d06a4a301c0cc262feb84188002e7"
+
 follow-redirects@^1.0.0:
   version "1.5.10"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.5.10.tgz#7b7a9f9aea2fdff36786a94ff643ed07f4ff5e2a"
@@ -4341,6 +4355,10 @@ form-data@~2.3.2:
     asynckit "^0.4.0"
     combined-stream "^1.0.6"
     mime-types "^2.1.12"
+
+format@^0.2.2:
+  version "0.2.2"
+  resolved "http://registry.npm.taobao.org/format/download/format-0.2.2.tgz#d6170107e9efdc4ed30c9dc39016df942b5cb58b"
 
 forwarded@~0.1.2:
   version "0.1.2"
@@ -4535,7 +4553,6 @@ gatsby-plugin-react-helmet@^3.0.0:
 gatsby-plugin-remove-serviceworker@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-remove-serviceworker/-/gatsby-plugin-remove-serviceworker-1.0.0.tgz#9fb433bc8bd766e14e1d3711c4ac6f051e1dff7c"
-  integrity sha1-n7QzvIvXZuFOHTcRxKxvBR4d/3w=
 
 gatsby-plugin-sharp@^2.0.6:
   version "2.0.16"
@@ -5535,7 +5552,7 @@ ignore-walk@^3.0.1:
   dependencies:
     minimatch "^3.0.4"
 
-ignore@^3.3.3, ignore@^3.3.5:
+ignore@^3.2.0, ignore@^3.3.3, ignore@^3.3.5:
   version "3.3.10"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-3.3.10.tgz#0a97fb876986e8081c631160f8f9f389157f0043"
 
@@ -5623,10 +5640,6 @@ indent-string@^2.1.0:
   dependencies:
     repeating "^2.0.0"
 
-indent-string@^3.1.0:
-  version "3.2.0"
-  resolved "http://registry.npm.taobao.org/indent-string/download/indent-string-3.2.0.tgz#4a5fd6d27cc332f37e5419a504dbb837105c9289"
-
 indexes-of@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/indexes-of/-/indexes-of-1.0.1.tgz#f30f716c8e2bd346c7b67d3df3915566a7c05607"
@@ -5653,18 +5666,6 @@ inherits@2.0.1:
 ini@^1.3.4, ini@~1.3.0:
   version "1.3.5"
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
-
-ink@^0.5.1:
-  version "0.5.1"
-  resolved "http://registry.npm.taobao.org/ink/download/ink-0.5.1.tgz#fc989c6c82f30f4667e711310b5134e8f7f2b17a"
-  dependencies:
-    arrify "^1.0.1"
-    chalk "^2.0.1"
-    indent-string "^3.1.0"
-    is-equal-shallow "^0.1.3"
-    lodash.flattendeep "^4.4.0"
-    log-update "^2.1.0"
-    prop-types "^15.5.10"
 
 inquirer@3.3.0, inquirer@^3.0.6:
   version "3.3.0"
@@ -5746,6 +5747,10 @@ ip@^1.1.0, ip@^1.1.5:
 ipaddr.js@1.8.0, ipaddr.js@^1.5.2:
   version "1.8.0"
   resolved "https://registry.yarnpkg.com/ipaddr.js/-/ipaddr.js-1.8.0.tgz#eaa33d6ddd7ace8f7f6fe0c9ca0440e706738b1e"
+
+irregular-plurals@^2.0.0:
+  version "2.0.0"
+  resolved "http://registry.npm.taobao.org/irregular-plurals/download/irregular-plurals-2.0.0.tgz#39d40f05b00f656d0b7fa471230dd3b714af2872"
 
 is-absolute-url@^2.0.0:
   version "2.1.0"
@@ -5896,6 +5901,10 @@ is-dotfile@^1.0.0:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/is-dotfile/-/is-dotfile-1.0.3.tgz#a6a2f32ffd2dfb04f5ca25ecd0f6b83cf798a1e1"
 
+is-empty@^1.0.0:
+  version "1.2.0"
+  resolved "http://registry.npm.taobao.org/is-empty/download/is-empty-1.2.0.tgz#de9bb5b278738a05a0b09a57e1fb4d4a341a9f6b"
+
 is-equal-shallow@^0.1.3:
   version "0.1.3"
   resolved "https://registry.yarnpkg.com/is-equal-shallow/-/is-equal-shallow-0.1.3.tgz#2238098fc221de0bcfa5d9eac4c45d638aa1c534"
@@ -5961,6 +5970,10 @@ is-glob@^4.0.0:
 is-hexadecimal@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/is-hexadecimal/-/is-hexadecimal-1.0.2.tgz#b6e710d7d07bb66b98cb8cece5c9b4921deeb835"
+
+is-hidden@^1.0.1:
+  version "1.1.1"
+  resolved "http://registry.npm.taobao.org/is-hidden/download/is-hidden-1.1.1.tgz#82ee6a93aeef3fb007ad5b9457c0584d45329f38"
 
 is-installed-globally@^0.1.0:
   version "0.1.0"
@@ -6239,6 +6252,13 @@ js-yaml@^3.10.0, js-yaml@^3.11.0, js-yaml@^3.12.0, js-yaml@^3.5.2, js-yaml@^3.9.
     argparse "^1.0.7"
     esprima "^4.0.0"
 
+js-yaml@^3.6.1:
+  version "3.12.1"
+  resolved "http://registry.npm.taobao.org/js-yaml/download/js-yaml-3.12.1.tgz#295c8632a18a23e054cf5c9d3cecafe678167600"
+  dependencies:
+    argparse "^1.0.7"
+    esprima "^4.0.0"
+
 js-yaml@~3.7.0:
   version "3.7.0"
   resolved "https://registry.yarnpkg.com/js-yaml/-/js-yaml-3.7.0.tgz#5c967ddd837a9bfdca5f2de84253abe8a1c03b80"
@@ -6298,7 +6318,7 @@ json3@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/json3/-/json3-3.3.2.tgz#3c0434743df93e2f5c42aee7b19bcb483575f4e1"
 
-json5@^1.0.1:
+json5@^1.0.0, json5@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/json5/-/json5-1.0.1.tgz#779fb0018604fa854eacbf6252180d83543e3dbe"
   dependencies:
@@ -6417,18 +6437,6 @@ levn@^0.3.0, levn@~0.3.0:
     prelude-ls "~1.1.2"
     type-check "~0.3.2"
 
-lint-md@^0.1.0:
-  version "0.1.0"
-  resolved "http://registry.npm.taobao.org/lint-md/download/lint-md-0.1.0.tgz#30cd099a1a3af70ffdb1e2f44340dd69cb6168a8"
-  dependencies:
-    ast-plugin "^0.0.7"
-    commander "^2.19.0"
-    glob "^7.1.3"
-    ink "^0.5.1"
-    lodash "^4.17.11"
-    remark-parse "^6.0.2"
-    unified "^7.0.1"
-
 load-bmfont@^1.2.3:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/load-bmfont/-/load-bmfont-1.4.0.tgz#75f17070b14a8c785fe7f5bee2e6fd4f98093b6b"
@@ -6460,6 +6468,13 @@ load-json-file@^2.0.0:
     parse-json "^2.2.0"
     pify "^2.0.0"
     strip-bom "^3.0.0"
+
+load-plugin@^2.0.0:
+  version "2.3.0"
+  resolved "http://registry.npm.taobao.org/load-plugin/download/load-plugin-2.3.0.tgz#577b6a956b344fd2ae80d8ecff5944febeea8eb7"
+  dependencies:
+    npm-prefix "^1.2.0"
+    resolve-from "^4.0.0"
 
 loader-fs-cache@^1.0.0:
   version "1.0.1"
@@ -6572,14 +6587,6 @@ lodash@^4.11.1, lodash@^4.13.1, lodash@^4.15.0, lodash@^4.17.10, lodash@^4.17.11
   version "4.17.11"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
 
-log-update@^2.1.0:
-  version "2.3.0"
-  resolved "http://registry.npm.taobao.org/log-update/download/log-update-2.3.0.tgz#88328fd7d1ce7938b29283746f0b1bc126b24708"
-  dependencies:
-    ansi-escapes "^3.0.0"
-    cli-cursor "^2.0.0"
-    wrap-ansi "^3.0.1"
-
 logalot@^2.0.0, logalot@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/logalot/-/logalot-2.1.0.tgz#5f8e8c90d304edf12530951a5554abb8c5e3f552"
@@ -6683,6 +6690,10 @@ markdown-escapes@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/markdown-escapes/-/markdown-escapes-1.0.2.tgz#e639cbde7b99c841c0bacc8a07982873b46d2122"
 
+markdown-extensions@^1.1.0:
+  version "1.1.1"
+  resolved "http://registry.npm.taobao.org/markdown-extensions/download/markdown-extensions-1.1.1.tgz#fea03b539faeaee9b4ef02a3769b455b189f7fc3"
+
 markdown-table@^1.1.0:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/markdown-table/-/markdown-table-1.1.2.tgz#c78db948fa879903a41bce522e3b96f801c63786"
@@ -6713,6 +6724,10 @@ md5@^2.2.1:
     crypt "~0.0.1"
     is-buffer "~1.1.1"
 
+mdast-comment-marker@^1.0.0:
+  version "1.1.0"
+  resolved "http://registry.npm.taobao.org/mdast-comment-marker/download/mdast-comment-marker-1.1.0.tgz#81129dd4182eaeafbd40bb1f79be4da587a1dc52"
+
 mdast-util-compact@^1.0.0:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/mdast-util-compact/-/mdast-util-compact-1.0.2.tgz#c12ebe16fffc84573d3e19767726de226e95f649"
@@ -6724,6 +6739,10 @@ mdast-util-definitions@^1.2.0:
   resolved "https://registry.yarnpkg.com/mdast-util-definitions/-/mdast-util-definitions-1.2.3.tgz#49f936b09207c45b438db19551652934312f04f0"
   dependencies:
     unist-util-visit "^1.0.0"
+
+mdast-util-heading-style@^1.0.2:
+  version "1.0.4"
+  resolved "http://registry.npm.taobao.org/mdast-util-heading-style/download/mdast-util-heading-style-1.0.4.tgz#8e796de77f91c141691620ebbb5c9140609e3fd2"
 
 mdast-util-to-hast@^3.0.0:
   version "3.0.4"
@@ -7286,6 +7305,14 @@ npm-packlist@^1.1.6:
   dependencies:
     ignore-walk "^3.0.1"
     npm-bundled "^1.0.1"
+
+npm-prefix@^1.2.0:
+  version "1.2.0"
+  resolved "http://registry.npm.taobao.org/npm-prefix/download/npm-prefix-1.2.0.tgz#e619455f7074ba54cc66d6d0d37dd9f1be6bcbc0"
+  dependencies:
+    rc "^1.1.0"
+    shellsubstitute "^1.1.0"
+    untildify "^2.1.0"
 
 npm-run-path@^2.0.0:
   version "2.0.2"
@@ -7887,6 +7914,12 @@ please-upgrade-node@^3.1.1:
   dependencies:
     semver-compare "^1.0.0"
 
+plur@^3.0.0:
+  version "3.0.1"
+  resolved "http://registry.npm.taobao.org/plur/download/plur-3.0.1.tgz#268652d605f816699b42b86248de73c9acd06a7c"
+  dependencies:
+    irregular-plurals "^2.0.0"
+
 pluralize@^7.0.0:
   version "7.0.0"
   resolved "https://registry.yarnpkg.com/pluralize/-/pluralize-7.0.0.tgz#298b89df8b93b0221dbf421ad2b1b1ea23fc6777"
@@ -8338,7 +8371,7 @@ prompts@^2.0.1:
     kleur "^3.0.0"
     sisteransi "^1.0.0"
 
-prop-types@^15.5.10, prop-types@^15.5.4, prop-types@^15.6.1, prop-types@^15.6.2:
+prop-types@^15.5.4, prop-types@^15.6.1, prop-types@^15.6.2:
   version "15.6.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.2.tgz#05d5ca77b4453e985d60fc7ff8c859094a497102"
   dependencies:
@@ -8499,7 +8532,7 @@ raw-loader@^0.5.1:
   version "0.5.1"
   resolved "https://registry.yarnpkg.com/raw-loader/-/raw-loader-0.5.1.tgz#0c3d0beaed8a01c966d9787bf778281252a979aa"
 
-rc@^1.0.1, rc@^1.1.6, rc@^1.2.7:
+rc@^1.0.1, rc@^1.1.0, rc@^1.1.6, rc@^1.2.7:
   version "1.2.8"
   resolved "https://registry.yarnpkg.com/rc/-/rc-1.2.8.tgz#cd924bf5200a075b83c188cd6b9e211b7fc0d3ed"
   dependencies:
@@ -8837,11 +8870,545 @@ relay-runtime@1.5.0:
     babel-runtime "^6.23.0"
     fbjs "^0.8.14"
 
+remark-cli@^6.0.1:
+  version "6.0.1"
+  resolved "http://registry.npm.taobao.org/remark-cli/download/remark-cli-6.0.1.tgz#ace67b94c05df0516b6be8dd70f326b6fa9c3770"
+  dependencies:
+    markdown-extensions "^1.1.0"
+    remark "^10.0.0"
+    unified-args "^6.0.0"
+
+remark-frontmatter@^1.3.1:
+  version "1.3.1"
+  resolved "http://registry.npm.taobao.org/remark-frontmatter/download/remark-frontmatter-1.3.1.tgz#bc28c0c913fa0b9dd26f17304bc47b856b2ea2de"
+  dependencies:
+    fault "^1.0.1"
+    xtend "^4.0.1"
+
+remark-lint-blockquote-indentation@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-blockquote-indentation/download/remark-lint-blockquote-indentation-1.0.2.tgz#e84ab0dc4bf468ca10c53f09e1cb8dd0c2f56a95"
+  dependencies:
+    mdast-util-to-string "^1.0.2"
+    plur "^3.0.0"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-checkbox-character-style@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-checkbox-character-style/download/remark-lint-checkbox-character-style-1.0.2.tgz#0dc33eb1a2753e2c4212799cbf15cd4153aeef55"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+    vfile-location "^2.0.1"
+
+remark-lint-checkbox-content-indent@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-checkbox-content-indent/download/remark-lint-checkbox-content-indent-1.0.2.tgz#8e145a0d030254c17a6542c4377b473d621f16d2"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+    vfile-location "^2.0.1"
+
+remark-lint-code-block-style@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-code-block-style/download/remark-lint-code-block-style-1.0.2.tgz#f24ef71767d5933ed83de93a54a85faf9e02c197"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-definition-case@^1.0.3:
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/remark-lint-definition-case/download/remark-lint-definition-case-1.0.3.tgz#4dbc9322eeb7f8d0402f4f1056eaf97812a47557"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.4.0"
+
+remark-lint-definition-spacing@^1.0.3:
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/remark-lint-definition-spacing/download/remark-lint-definition-spacing-1.0.3.tgz#f7fc54d0fe7b3cd6b94e2e1290220dd1a3cfb1ff"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.4.0"
+
+remark-lint-emphasis-marker@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-emphasis-marker/download/remark-lint-emphasis-marker-1.0.2.tgz#df77c6b62b87a61ddf683e791d13ccfae050c318"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-fenced-code-flag@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-fenced-code-flag/download/remark-lint-fenced-code-flag-1.0.2.tgz#614232ab7923fc0a3e8694b485bc7ae664c7046b"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-fenced-code-marker@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-fenced-code-marker/download/remark-lint-fenced-code-marker-1.0.2.tgz#07959311cf7b9cbe35ae279ea3cb7823205cb29f"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-file-extension@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-file-extension/download/remark-lint-file-extension-1.0.2.tgz#c52c6e00c9d1f5e729f515c1bb9c23de9aef4983"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+
+remark-lint-final-definition@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-final-definition/download/remark-lint-final-definition-1.0.2.tgz#63e013c9f95c9b52197f19c6e0d14b622352e0f3"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-final-newline@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-final-newline/download/remark-lint-final-newline-1.0.2.tgz#13b9ff6bd3e9c377286b439d8f14b04efde3898f"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+
+remark-lint-first-heading-level@^1.1.3:
+  version "1.1.3"
+  resolved "http://registry.npm.taobao.org/remark-lint-first-heading-level/download/remark-lint-first-heading-level-1.1.3.tgz#905e163282bef82fcbffd6c8cd4be54897c1a658"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-visit "^1.4.0"
+
+remark-lint-heading-increment@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-heading-increment/download/remark-lint-heading-increment-1.0.2.tgz#5da0771232711a42acb66fa79c3c6686de402c3e"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-heading-style@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-heading-style/download/remark-lint-heading-style-1.0.2.tgz#87bdab061c9d259f50b5c51ce478d1c65bd31ae8"
+  dependencies:
+    mdast-util-heading-style "^1.0.2"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-linebreak-style@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-linebreak-style/download/remark-lint-linebreak-style-1.0.2.tgz#b9be066c95a12599505b91aae6b7b27a84297562"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    vfile-location "^2.0.1"
+
+remark-lint-link-title-style@^1.0.3:
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/remark-lint-link-title-style/download/remark-lint-link-title-style-1.0.3.tgz#4dd3aafaf9824523d4f0c8e11171581c89071702"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+    vfile-location "^2.0.1"
+
+remark-lint-list-item-bullet-indent@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-list-item-bullet-indent/download/remark-lint-list-item-bullet-indent-1.0.2.tgz#82461e7295b9e208e7c41b62d30476a69727b0cb"
+  dependencies:
+    plur "^3.0.0"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-list-item-content-indent@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-list-item-content-indent/download/remark-lint-list-item-content-indent-1.0.2.tgz#2564f4b661c4a82a92ecf60a1c4a2b867355c654"
+  dependencies:
+    plur "^3.0.0"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-list-item-indent@^1.0.3:
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/remark-lint-list-item-indent/download/remark-lint-list-item-indent-1.0.3.tgz#93dac0cc312ee8dd9c8a0749b44b17b95b765f53"
+  dependencies:
+    plur "^3.0.0"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-list-item-spacing@^1.1.2:
+  version "1.1.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-list-item-spacing/download/remark-lint-list-item-spacing-1.1.2.tgz#55f0d38b0bc1b1c1a553c2d7418066ad1aed9d16"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-maximum-heading-length@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-maximum-heading-length/download/remark-lint-maximum-heading-length-1.0.2.tgz#8588923a480d3f039d6c28ae60a6b03cf864b5c8"
+  dependencies:
+    mdast-util-to-string "^1.0.2"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-no-auto-link-without-protocol@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-auto-link-without-protocol/download/remark-lint-no-auto-link-without-protocol-1.0.2.tgz#4532087419b1b131b4057ecf0a3a446f0afc2c6e"
+  dependencies:
+    mdast-util-to-string "^1.0.2"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-no-blockquote-without-marker@^2.0.2:
+  version "2.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-blockquote-without-marker/download/remark-lint-no-blockquote-without-marker-2.0.2.tgz#61b6a0a74fbfba8fd168ac0fcc2a673eb47b9880"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+    vfile-location "^2.0.1"
+
+remark-lint-no-consecutive-blank-lines@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-consecutive-blank-lines/download/remark-lint-no-consecutive-blank-lines-1.0.2.tgz#ba7c8944335a80e67c811028732f12e521d07d93"
+  dependencies:
+    plur "^3.0.0"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-no-duplicate-definitions@^1.0.3:
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-duplicate-definitions/download/remark-lint-no-duplicate-definitions-1.0.3.tgz#d35e21718e230b2e75a88f166efcfe84267baa82"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-stringify-position "^1.1.2"
+    unist-util-visit "^1.4.0"
+
+remark-lint-no-duplicate-headings-in-section@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-duplicate-headings-in-section/download/remark-lint-no-duplicate-headings-in-section-1.0.2.tgz#136a45770bc400fae7137e222b9f5c2d2573ce47"
+  dependencies:
+    mdast-util-to-string "^1.0.2"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-stringify-position "^1.1.2"
+    unist-util-visit "^1.1.1"
+
+remark-lint-no-empty-url@^1.0.4:
+  version "1.0.4"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-empty-url/download/remark-lint-no-empty-url-1.0.4.tgz#555cc1b237d9a5b7ea48e97fef1d030d053f43c9"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-visit "^1.4.0"
+
+remark-lint-no-file-name-articles@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-file-name-articles/download/remark-lint-no-file-name-articles-1.0.2.tgz#a8187e44584e56ccc37fcd7bbc758e940a5b1829"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+
+remark-lint-no-file-name-consecutive-dashes@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-file-name-consecutive-dashes/download/remark-lint-no-file-name-consecutive-dashes-1.0.2.tgz#e8536f4c9f349965d9b4990a75a27857dac72488"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+
+remark-lint-no-file-name-irregular-characters@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-file-name-irregular-characters/download/remark-lint-no-file-name-irregular-characters-1.0.2.tgz#0dffe8f4dc7ffe79f634d4609a8f28261a981552"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+
+remark-lint-no-file-name-mixed-case@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-file-name-mixed-case/download/remark-lint-no-file-name-mixed-case-1.0.2.tgz#965606ac41b53fef8a4c8d0c7bd1bed63e26a357"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+
+remark-lint-no-file-name-outer-dashes@^1.0.3:
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-file-name-outer-dashes/download/remark-lint-no-file-name-outer-dashes-1.0.3.tgz#d5b217a8341ac79b4a378770488b3ccc8bc4a5b5"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+
+remark-lint-no-heading-content-indent@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-heading-content-indent/download/remark-lint-no-heading-content-indent-1.0.2.tgz#812c4af2a18491bbf278f15a6f533169203a1b3c"
+  dependencies:
+    mdast-util-heading-style "^1.0.2"
+    plur "^3.0.0"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-no-heading-indent@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-heading-indent/download/remark-lint-no-heading-indent-1.0.2.tgz#fdd16a802bbf7f21cdbea8497ef1fd8c7b8718bd"
+  dependencies:
+    plur "^3.0.0"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-no-heading-like-paragraph@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-heading-like-paragraph/download/remark-lint-no-heading-like-paragraph-1.0.2.tgz#b4fda768ee4f11e77b5f7c6f97e1d0b4b294c416"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-no-heading-punctuation@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-heading-punctuation/download/remark-lint-no-heading-punctuation-1.0.2.tgz#c520d8614d641b05ac75c25502901df9218b4b5e"
+  dependencies:
+    mdast-util-to-string "^1.0.2"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-no-inline-padding@^1.0.3:
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-inline-padding/download/remark-lint-no-inline-padding-1.0.3.tgz#a31e3a04ab0d47ea7e7be8416b5d2d668ad8f7cf"
+  dependencies:
+    mdast-util-to-string "^1.0.2"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-visit "^1.4.0"
+
+remark-lint-no-literal-urls@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-literal-urls/download/remark-lint-no-literal-urls-1.0.2.tgz#1c60160a76bd9ddacd42819b43dadeb481a530df"
+  dependencies:
+    mdast-util-to-string "^1.0.2"
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-no-missing-blank-lines@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-missing-blank-lines/download/remark-lint-no-missing-blank-lines-1.0.2.tgz#5d3ec89b4d117eaadbebbcbf8f265439c4390f0c"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-no-multiple-toplevel-headings@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-multiple-toplevel-headings/download/remark-lint-no-multiple-toplevel-headings-1.0.2.tgz#65f7288f66a1a14394f6c6f0910d36112f60e3eb"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-stringify-position "^1.1.2"
+    unist-util-visit "^1.1.1"
+
+remark-lint-no-paragraph-content-indent@^1.0.5:
+  version "1.0.5"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-paragraph-content-indent/download/remark-lint-no-paragraph-content-indent-1.0.5.tgz#a3b25fc4e5129d8f0bc5da9fe71cccc726931c0f"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.4.0"
+
+remark-lint-no-reference-like-url@^1.0.3:
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-reference-like-url/download/remark-lint-no-reference-like-url-1.0.3.tgz#a8f570c7d02568ebd9761cf1ecb30686416e95e5"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-visit "^1.4.0"
+
+remark-lint-no-shell-dollars@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-shell-dollars/download/remark-lint-no-shell-dollars-1.0.2.tgz#361599631271f7237b2147e692be40e08975330c"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-no-shortcut-reference-image@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-shortcut-reference-image/download/remark-lint-no-shortcut-reference-image-1.0.2.tgz#784011b832173ad9e87d4f40c90f935de0841764"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-no-shortcut-reference-link@^1.0.3:
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-shortcut-reference-link/download/remark-lint-no-shortcut-reference-link-1.0.3.tgz#4210d37d234b427dd131eb11473a7a2d3719a819"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-no-table-indentation@^1.0.3:
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-table-indentation/download/remark-lint-no-table-indentation-1.0.3.tgz#03eaa9c9d4609999cda101451451270656809c78"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.4.0"
+
+remark-lint-no-tabs@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-tabs/download/remark-lint-no-tabs-1.0.2.tgz#a6605c63140b2bb50f6183297cd1e02ac3213455"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    vfile-location "^2.0.1"
+
+remark-lint-no-undefined-references@^1.0.3:
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-undefined-references/download/remark-lint-no-undefined-references-1.0.3.tgz#93255cfd5a8cb81850d7848d41fe176cc2be058a"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-visit "^1.4.0"
+
+remark-lint-no-unused-definitions@^1.0.4:
+  version "1.0.4"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-unused-definitions/download/remark-lint-no-unused-definitions-1.0.4.tgz#c627146f89ab8aec0f3c4e587e29e41ee6ab2ea9"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-visit "^1.4.0"
+
+remark-lint-ordered-list-marker-style@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-ordered-list-marker-style/download/remark-lint-ordered-list-marker-style-1.0.2.tgz#ad7461306a7701fc931245300dfd7dbd9fbb589f"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-ordered-list-marker-value@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-ordered-list-marker-value/download/remark-lint-ordered-list-marker-value-1.0.2.tgz#26f5f1ddfadb7c958f8e2c15cd3aa9f2be985be6"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-rule-style@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-rule-style/download/remark-lint-rule-style-1.0.2.tgz#51f82acb1e6cdf76ea6107bb231d2336615fa98d"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-strong-marker@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-strong-marker/download/remark-lint-strong-marker-1.0.2.tgz#6ce3670f79bf5978b7518af35e6072c8425f0f46"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-table-cell-padding@^1.0.3:
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/remark-lint-table-cell-padding/download/remark-lint-table-cell-padding-1.0.3.tgz#fafec50deb8476cb3241f2da4ef0b8b66f549741"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.4.0"
+
+remark-lint-table-pipe-alignment@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-table-pipe-alignment/download/remark-lint-table-pipe-alignment-1.0.2.tgz#3d79927c18b5a5713079a7890a392b740e0bc45a"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-table-pipes@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-table-pipes/download/remark-lint-table-pipes-1.0.2.tgz#a7e95c93d6908c2b515651aa44fc8c922626ad32"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint-unordered-list-marker-style@^1.0.2:
+  version "1.0.2"
+  resolved "http://registry.npm.taobao.org/remark-lint-unordered-list-marker-style/download/remark-lint-unordered-list-marker-style-1.0.2.tgz#2d631c3e7e0604e1d45d5586a0bbb21474bb89a4"
+  dependencies:
+    unified-lint-rule "^1.0.0"
+    unist-util-generated "^1.1.0"
+    unist-util-position "^3.0.0"
+    unist-util-visit "^1.1.1"
+
+remark-lint@^6.0.4:
+  version "6.0.4"
+  resolved "http://registry.npm.taobao.org/remark-lint/download/remark-lint-6.0.4.tgz#13def899efd7d7d105188c274663a60e0fe8fa59"
+  dependencies:
+    remark-message-control "^4.0.0"
+
 remark-math@^1.0.3:
   version "1.0.5"
   resolved "http://registry.npm.taobao.org/remark-math/download/remark-math-1.0.5.tgz#110a6e7f7cd35d24795646defa18d2d98f25139b"
   dependencies:
     trim-trailing-lines "^1.1.0"
+
+remark-message-control@^4.0.0:
+  version "4.1.1"
+  resolved "http://registry.npm.taobao.org/remark-message-control/download/remark-message-control-4.1.1.tgz#a3f0b08dffda484e7196f0539de1488220f1d251"
+  dependencies:
+    mdast-comment-marker "^1.0.0"
+    unified-message-control "^1.0.0"
+    xtend "^4.0.1"
 
 remark-parse@^5.0.0:
   version "5.0.0"
@@ -8863,7 +9430,7 @@ remark-parse@^5.0.0:
     vfile-location "^2.0.0"
     xtend "^4.0.1"
 
-remark-parse@^6.0.2:
+remark-parse@^6.0.0:
   version "6.0.3"
   resolved "http://registry.npm.taobao.org/remark-parse/download/remark-parse-6.0.3.tgz#c99131052809da482108413f87b0ee7f52180a3a"
   dependencies:
@@ -8915,6 +9482,33 @@ remark-stringify@^5.0.0:
     unherit "^1.0.4"
     xtend "^4.0.1"
 
+remark-stringify@^6.0.0:
+  version "6.0.4"
+  resolved "http://registry.npm.taobao.org/remark-stringify/download/remark-stringify-6.0.4.tgz#16ac229d4d1593249018663c7bddf28aafc4e088"
+  dependencies:
+    ccount "^1.0.0"
+    is-alphanumeric "^1.0.0"
+    is-decimal "^1.0.0"
+    is-whitespace-character "^1.0.0"
+    longest-streak "^2.0.1"
+    markdown-escapes "^1.0.0"
+    markdown-table "^1.1.0"
+    mdast-util-compact "^1.0.0"
+    parse-entities "^1.0.2"
+    repeat-string "^1.5.4"
+    state-toggle "^1.0.0"
+    stringify-entities "^1.0.1"
+    unherit "^1.0.4"
+    xtend "^4.0.1"
+
+remark@^10.0.0:
+  version "10.0.1"
+  resolved "http://registry.npm.taobao.org/remark/download/remark-10.0.1.tgz#3058076dc41781bf505d8978c291485fe47667df"
+  dependencies:
+    remark-parse "^6.0.0"
+    remark-stringify "^6.0.0"
+    unified "^7.0.0"
+
 remark@^9.0.0:
   version "9.0.0"
   resolved "https://registry.yarnpkg.com/remark/-/remark-9.0.0.tgz#c5cfa8ec535c73a67c4b0f12bfdbd3a67d8b2f60"
@@ -8941,7 +9535,7 @@ repeat-element@^1.1.2:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/repeat-element/-/repeat-element-1.1.3.tgz#782e0d825c0c5a3bb39731f84efee6b742e6b1ce"
 
-repeat-string@^1.5.2, repeat-string@^1.5.4, repeat-string@^1.6.1:
+repeat-string@^1.5.0, repeat-string@^1.5.2, repeat-string@^1.5.4, repeat-string@^1.6.1:
   version "1.6.1"
   resolved "https://registry.yarnpkg.com/repeat-string/-/repeat-string-1.6.1.tgz#8dcae470e1c88abc2d600fff4a776286da75e637"
 
@@ -9386,6 +9980,10 @@ shell-quote@1.6.1:
     array-reduce "~0.0.0"
     jsonify "~0.0.0"
 
+shellsubstitute@^1.1.0:
+  version "1.2.0"
+  resolved "http://registry.npm.taobao.org/shellsubstitute/download/shellsubstitute-1.2.0.tgz#e4f702a50c518b0f6fe98451890d705af29b6b70"
+
 sift@^5.1.0:
   version "5.1.0"
   resolved "https://registry.yarnpkg.com/sift/-/sift-5.1.0.tgz#1bbf2dfb0eb71e56c4cc7fb567fbd1351b65015e"
@@ -9441,6 +10039,10 @@ slice-ansi@1.0.0:
   resolved "https://registry.yarnpkg.com/slice-ansi/-/slice-ansi-1.0.0.tgz#044f1a49d8842ff307aad6b505ed178bd950134d"
   dependencies:
     is-fullwidth-code-point "^2.0.0"
+
+sliced@^1.0.1:
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/sliced/download/sliced-1.0.1.tgz#0b3a662b5d04c3177b1926bea82b03f837a2ef41"
 
 snapdragon-node@^2.0.1:
   version "2.1.1"
@@ -10034,7 +10636,7 @@ terser@^3.8.1:
     source-map "~0.6.1"
     source-map-support "~0.5.6"
 
-text-table@0.2.0, text-table@~0.2.0:
+text-table@0.2.0, text-table@^0.2.0, text-table@~0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
 
@@ -10128,6 +10730,13 @@ to-regex@^3.0.1, to-regex@^3.0.2:
     extend-shallow "^3.0.2"
     regex-not "^1.0.2"
     safe-regex "^1.1.0"
+
+to-vfile@^4.0.0:
+  version "4.0.0"
+  resolved "http://registry.npm.taobao.org/to-vfile/download/to-vfile-4.0.0.tgz#465ade5fc2b9e97e6c80b854d378a5d0f4b5d04a"
+  dependencies:
+    is-buffer "^2.0.0"
+    vfile "^3.0.0"
 
 topo@2.x.x:
   version "2.0.2"
@@ -10286,6 +10895,57 @@ unicode-property-aliases-ecmascript@^1.0.4:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/unicode-property-aliases-ecmascript/-/unicode-property-aliases-ecmascript-1.0.4.tgz#5a533f31b4317ea76f17d807fa0d116546111dd0"
 
+unified-args@^6.0.0:
+  version "6.0.0"
+  resolved "http://registry.npm.taobao.org/unified-args/download/unified-args-6.0.0.tgz#ffa3be9372ebe311099b30435b17269b0000d04c"
+  dependencies:
+    camelcase "^5.0.0"
+    chalk "^2.0.0"
+    chokidar "^2.0.0"
+    fault "^1.0.2"
+    json5 "^1.0.0"
+    minimist "^1.2.0"
+    text-table "^0.2.0"
+    unified-engine "^6.0.0"
+
+unified-engine@^6.0.0:
+  version "6.0.1"
+  resolved "http://registry.npm.taobao.org/unified-engine/download/unified-engine-6.0.1.tgz#22236f1d253a6d07b6605eca83a2bcce08fc6f05"
+  dependencies:
+    concat-stream "^1.5.1"
+    debug "^3.1.0"
+    fault "^1.0.0"
+    fn-name "^2.0.1"
+    glob "^7.0.3"
+    ignore "^3.2.0"
+    is-empty "^1.0.0"
+    is-hidden "^1.0.1"
+    is-object "^1.0.1"
+    js-yaml "^3.6.1"
+    load-plugin "^2.0.0"
+    parse-json "^4.0.0"
+    to-vfile "^4.0.0"
+    trough "^1.0.0"
+    unist-util-inspect "^4.1.2"
+    vfile-reporter "^5.0.0"
+    vfile-statistics "^1.1.0"
+    x-is-string "^0.1.0"
+    xtend "^4.0.1"
+
+unified-lint-rule@^1.0.0:
+  version "1.0.3"
+  resolved "http://registry.npm.taobao.org/unified-lint-rule/download/unified-lint-rule-1.0.3.tgz#e302b0c4a7ac428c0980e049a500e59528001299"
+  dependencies:
+    wrapped "^1.0.1"
+
+unified-message-control@^1.0.0:
+  version "1.0.4"
+  resolved "http://registry.npm.taobao.org/unified-message-control/download/unified-message-control-1.0.4.tgz#a5e02c07112f78c6687b83a10392c2fba86dc09b"
+  dependencies:
+    trim "0.0.1"
+    unist-util-visit "^1.0.0"
+    vfile-location "^2.0.0"
+
 unified@^6.0.0, unified@^6.1.5:
   version "6.2.0"
   resolved "https://registry.yarnpkg.com/unified/-/unified-6.2.0.tgz#7fbd630f719126d67d40c644b7e3f617035f6dba"
@@ -10297,7 +10957,7 @@ unified@^6.0.0, unified@^6.1.5:
     vfile "^2.0.0"
     x-is-string "^0.1.0"
 
-unified@^7.0.1:
+unified@^7.0.0:
   version "7.1.0"
   resolved "http://registry.npm.taobao.org/unified/download/unified-7.1.0.tgz#5032f1c1ee3364bd09da12e27fdd4a7553c7be13"
   dependencies:
@@ -10361,6 +11021,12 @@ unist-util-generated@^1.1.0:
   version "1.1.3"
   resolved "https://registry.yarnpkg.com/unist-util-generated/-/unist-util-generated-1.1.3.tgz#ca650470aef2fbcc5fe54c465bc26b41ca109e2b"
 
+unist-util-inspect@^4.1.2:
+  version "4.1.3"
+  resolved "http://registry.npm.taobao.org/unist-util-inspect/download/unist-util-inspect-4.1.3.tgz#39470e6d77485db285966df78431219aa1287822"
+  dependencies:
+    is-empty "^1.0.0"
+
 unist-util-is@^2.0.0, unist-util-is@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/unist-util-is/-/unist-util-is-2.1.2.tgz#1193fa8f2bfbbb82150633f3a8d2eb9a1c1d55db"
@@ -10389,7 +11055,7 @@ unist-util-select@^1.5.0:
     debug "^2.2.0"
     nth-check "^1.0.1"
 
-unist-util-stringify-position@^1.0.0, unist-util-stringify-position@^1.1.1:
+unist-util-stringify-position@^1.0.0, unist-util-stringify-position@^1.1.1, unist-util-stringify-position@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/unist-util-stringify-position/-/unist-util-stringify-position-1.1.2.tgz#3f37fcf351279dcbca7480ab5889bb8a832ee1c6"
 
@@ -10403,7 +11069,7 @@ unist-util-visit-parents@^2.0.0, unist-util-visit-parents@^2.0.1:
   dependencies:
     unist-util-is "^2.1.2"
 
-unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.3.0, unist-util-visit@^1.4.0:
+unist-util-visit@^1.0.0, unist-util-visit@^1.1.0, unist-util-visit@^1.1.1, unist-util-visit@^1.3.0, unist-util-visit@^1.4.0:
   version "1.4.0"
   resolved "https://registry.yarnpkg.com/unist-util-visit/-/unist-util-visit-1.4.0.tgz#1cb763647186dc26f5e1df5db6bd1e48b3cc2fb1"
   dependencies:
@@ -10427,6 +11093,12 @@ unset-value@^1.0.0:
   dependencies:
     has-value "^0.3.1"
     isobject "^3.0.0"
+
+untildify@^2.1.0:
+  version "2.1.0"
+  resolved "http://registry.npm.taobao.org/untildify/download/untildify-2.1.0.tgz#17eb2807987f76952e9c0485fc311d06a826a2e0"
+  dependencies:
+    os-homedir "^1.0.0"
 
 unzip-response@^2.0.1:
   version "2.0.1"
@@ -10575,7 +11247,7 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-vfile-location@^2.0.0:
+vfile-location@^2.0.0, vfile-location@^2.0.1:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/vfile-location/-/vfile-location-2.0.4.tgz#2a5e7297dd0d9e2da4381464d04acc6b834d3e55"
 
@@ -10584,6 +11256,25 @@ vfile-message@^1.0.0:
   resolved "https://registry.yarnpkg.com/vfile-message/-/vfile-message-1.1.1.tgz#5833ae078a1dfa2d96e9647886cd32993ab313e1"
   dependencies:
     unist-util-stringify-position "^1.1.1"
+
+vfile-reporter@^5.0.0:
+  version "5.1.1"
+  resolved "http://registry.npm.taobao.org/vfile-reporter/download/vfile-reporter-5.1.1.tgz#419688c7e9dcaf65ba81bfdb0ad443e9e0248e09"
+  dependencies:
+    repeat-string "^1.5.0"
+    string-width "^2.0.0"
+    supports-color "^5.4.0"
+    unist-util-stringify-position "^1.0.0"
+    vfile-sort "^2.1.2"
+    vfile-statistics "^1.1.0"
+
+vfile-sort@^2.1.2:
+  version "2.2.0"
+  resolved "http://registry.npm.taobao.org/vfile-sort/download/vfile-sort-2.2.0.tgz#383a8727ec4c5daf37c05683684a5eb686366d39"
+
+vfile-statistics@^1.1.0:
+  version "1.1.2"
+  resolved "http://registry.npm.taobao.org/vfile-statistics/download/vfile-statistics-1.1.2.tgz#c50132627e4669a3afa07c64ff1e7aa7695e8151"
 
 vfile@^2.0.0:
   version "2.3.0"
@@ -10817,12 +11508,12 @@ wrap-ansi@^2.0.0:
     string-width "^1.0.1"
     strip-ansi "^3.0.1"
 
-wrap-ansi@^3.0.1:
-  version "3.0.1"
-  resolved "http://registry.npm.taobao.org/wrap-ansi/download/wrap-ansi-3.0.1.tgz#288a04d87eda5c286e060dfe8f135ce8d007f8ba"
+wrapped@^1.0.1:
+  version "1.0.1"
+  resolved "http://registry.npm.taobao.org/wrapped/download/wrapped-1.0.1.tgz#c783d9d807b273e9b01e851680a938c87c907242"
   dependencies:
-    string-width "^2.1.1"
-    strip-ansi "^4.0.0"
+    co "3.1.0"
+    sliced "^1.0.1"
 
 wrappy@1:
   version "1.0.2"
