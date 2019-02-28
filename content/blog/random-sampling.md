@@ -1,8 +1,8 @@
 ---
 title: Random Sampling
 date: '2019-02-19'
-modified: '2019-02-19'
-tags: Algorithm
+modified: '2019-02-28'
+tags: Algorithm, Math
 category: Algorithm
 description: >-
   介绍了等概率与不等概率情况下如何对集合进行随机抽样，涵盖了已知大小与未知大小集合（数据流）的情况，涉及到 Fisher-Yates Shuffle
@@ -12,6 +12,8 @@ description: >-
 研究这个问题的初衷，是为了解决中饭吃什么的问题。显然，需要这样的一款算法，可以根据已知的喜爱程度，随机给定一款中饭的选择。在这里，等概率的选取显然是不合适的。更喜欢/便宜的午餐应该有更高的概率出现，但偶尔吃顿大餐也是惊喜所在。为此，就需要一款基于权重的随机抽样算法。
 
 当然，既然都研究随机抽样算法了，干脆就把各种情况都整理了一遍。遂有此文。
+
+注：相关功能，已经整理成了一个 npm 包，见：[random sampler](https://www.npmjs.com/package/random-sampler) 或 [GitHub Repo](https://github.com/laysent/random-sampler)。
 
 ## 已知大小集合的等概率随机抽样
 
