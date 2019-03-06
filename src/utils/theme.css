@@ -166,3 +166,19 @@ pre[data-line] {
   width: 1px
 }
  
+.license {
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+.license > a {
+  display: inline-block;
+  box-shadow: none;
+  height: 31px;
+  flex-shrink: 0;
+}
+
+.license > div {
+  margin-left: 10px;
+}
