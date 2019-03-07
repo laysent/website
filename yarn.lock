@@ -690,6 +690,75 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
+"@laysent/remark-preset-lint@^0.1.3":
+  version "0.1.3"
+  resolved "http://registry.npm.taobao.org/@laysent/remark-preset-lint/download/@laysent/remark-preset-lint-0.1.3.tgz#a54eabc3349ea271f5ab1725dc77ad146f5f1ad9"
+  dependencies:
+    remark-lint "^6.0.4"
+    remark-lint-blockquote-indentation "^1.0.2"
+    remark-lint-checkbox-character-style "^1.0.2"
+    remark-lint-checkbox-content-indent "^1.0.2"
+    remark-lint-code-block-style "^1.0.2"
+    remark-lint-definition-case "^1.0.3"
+    remark-lint-definition-spacing "^1.0.3"
+    remark-lint-emphasis-marker "^1.0.2"
+    remark-lint-fenced-code-flag "^1.0.2"
+    remark-lint-fenced-code-marker "^1.0.2"
+    remark-lint-file-extension "^1.0.2"
+    remark-lint-final-definition "^1.0.2"
+    remark-lint-final-newline "^1.0.2"
+    remark-lint-first-heading-level "^1.1.3"
+    remark-lint-heading-increment "^1.0.2"
+    remark-lint-heading-style "^1.0.2"
+    remark-lint-linebreak-style "^1.0.2"
+    remark-lint-link-title-style "^1.0.3"
+    remark-lint-list-item-bullet-indent "^1.0.2"
+    remark-lint-list-item-content-indent "^1.0.2"
+    remark-lint-list-item-indent "^1.0.3"
+    remark-lint-list-item-spacing "^1.1.2"
+    remark-lint-match-punctuation "^0.2.0"
+    remark-lint-maximum-heading-length "^1.0.2"
+    remark-lint-no-auto-link-without-protocol "^1.0.2"
+    remark-lint-no-blockquote-without-marker "^2.0.2"
+    remark-lint-no-chinese-punctuation-in-number "^0.1.0"
+    remark-lint-no-consecutive-blank-lines "^1.0.2"
+    remark-lint-no-duplicate-definitions "^1.0.3"
+    remark-lint-no-duplicate-headings-in-section "^1.0.2"
+    remark-lint-no-empty-url "^1.0.4"
+    remark-lint-no-file-name-articles "^1.0.2"
+    remark-lint-no-file-name-consecutive-dashes "^1.0.2"
+    remark-lint-no-file-name-irregular-characters "^1.0.2"
+    remark-lint-no-file-name-mixed-case "^1.0.2"
+    remark-lint-no-file-name-outer-dashes "^1.0.3"
+    remark-lint-no-heading-content-indent "^1.0.2"
+    remark-lint-no-heading-indent "^1.0.2"
+    remark-lint-no-heading-like-paragraph "^1.0.2"
+    remark-lint-no-heading-punctuation "^1.0.2"
+    remark-lint-no-inline-padding "^1.0.3"
+    remark-lint-no-literal-urls "^1.0.2"
+    remark-lint-no-missing-blank-lines "^1.0.2"
+    remark-lint-no-multiple-toplevel-headings "^1.0.2"
+    remark-lint-no-paragraph-content-indent "^1.0.5"
+    remark-lint-no-reference-like-url "^1.0.3"
+    remark-lint-no-repeat-punctuation "^0.1.0"
+    remark-lint-no-shell-dollars "^1.0.2"
+    remark-lint-no-shortcut-reference-image "^1.0.2"
+    remark-lint-no-shortcut-reference-link "^1.0.3"
+    remark-lint-no-table-indentation "^1.0.3"
+    remark-lint-no-tabs "^1.0.2"
+    remark-lint-no-undefined-references "^1.0.3"
+    remark-lint-no-unused-definitions "^1.0.4"
+    remark-lint-ordered-list-marker-style "^1.0.2"
+    remark-lint-ordered-list-marker-value "^1.0.2"
+    remark-lint-rule-style "^1.0.2"
+    remark-lint-spaces-around-number "^0.1.1"
+    remark-lint-spaces-around-word "^0.1.1"
+    remark-lint-strong-marker "^1.0.2"
+    remark-lint-table-cell-padding "^1.0.3"
+    remark-lint-table-pipe-alignment "^1.0.2"
+    remark-lint-table-pipes "^1.0.2"
+    remark-lint-unordered-list-marker-style "^1.0.2"
+
 "@moocar/lokijs@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@moocar/lokijs/-/lokijs-1.0.1.tgz#545227c173030dd0e6b1e6bdcef528012a6c325c"
@@ -9072,6 +9141,13 @@ remark-lint-list-item-spacing@^1.1.2:
     unist-util-position "^3.0.0"
     unist-util-visit "^1.1.1"
 
+remark-lint-match-punctuation@^0.2.0:
+  version "0.2.0"
+  resolved "http://registry.npm.taobao.org/remark-lint-match-punctuation/download/remark-lint-match-punctuation-0.2.0.tgz#d9f8e7271fbd88a076effd63a8a1f83f672c04c8"
+  dependencies:
+    unified-lint-rule "^1.0.3"
+    unist-util-to-list-of-char "^0.1.1"
+
 remark-lint-maximum-heading-length@^1.0.2:
   version "1.0.2"
   resolved "http://registry.npm.taobao.org/remark-lint-maximum-heading-length/download/remark-lint-maximum-heading-length-1.0.2.tgz#8588923a480d3f039d6c28ae60a6b03cf864b5c8"
@@ -9100,6 +9176,14 @@ remark-lint-no-blockquote-without-marker@^2.0.2:
     unist-util-position "^3.0.0"
     unist-util-visit "^1.1.1"
     vfile-location "^2.0.1"
+
+remark-lint-no-chinese-punctuation-in-number@^0.1.0:
+  version "0.1.0"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-chinese-punctuation-in-number/download/remark-lint-no-chinese-punctuation-in-number-0.1.0.tgz#8b39dc38fb24d55fa713b076e5dee59aee0cbff0"
+  dependencies:
+    unified-lint-rule "^1.0.3"
+    unist-util-to-string-with-nodes "^0.1.0"
+    unist-util-visit "^1.4.0"
 
 remark-lint-no-consecutive-blank-lines@^1.0.2:
   version "1.0.2"
@@ -9262,6 +9346,13 @@ remark-lint-no-reference-like-url@^1.0.3:
     unist-util-generated "^1.1.0"
     unist-util-visit "^1.4.0"
 
+remark-lint-no-repeat-punctuation@^0.1.0:
+  version "0.1.0"
+  resolved "http://registry.npm.taobao.org/remark-lint-no-repeat-punctuation/download/remark-lint-no-repeat-punctuation-0.1.0.tgz#350fb68e3758d765f2a1bc386d4590a50f5537b8"
+  dependencies:
+    unified-lint-rule "^1.0.3"
+    unist-util-to-list-of-char "^0.1.2"
+
 remark-lint-no-shell-dollars@^1.0.2:
   version "1.0.2"
   resolved "http://registry.npm.taobao.org/remark-lint-no-shell-dollars/download/remark-lint-no-shell-dollars-1.0.2.tgz#361599631271f7237b2147e692be40e08975330c"
@@ -9344,6 +9435,20 @@ remark-lint-rule-style@^1.0.2:
     unist-util-generated "^1.1.0"
     unist-util-position "^3.0.0"
     unist-util-visit "^1.1.1"
+
+remark-lint-spaces-around-number@^0.1.1:
+  version "0.1.1"
+  resolved "http://registry.npm.taobao.org/remark-lint-spaces-around-number/download/remark-lint-spaces-around-number-0.1.1.tgz#a5ce075d2f0de3c097168bcfb4133be16b04cd64"
+  dependencies:
+    unified-lint-rule "^1.0.3"
+    unist-util-to-list-of-char "^0.1.1"
+
+remark-lint-spaces-around-word@^0.1.1:
+  version "0.1.1"
+  resolved "http://registry.npm.taobao.org/remark-lint-spaces-around-word/download/remark-lint-spaces-around-word-0.1.1.tgz#dec0dc2b909fcc53b3fd82a26f5a139998a7d2ab"
+  dependencies:
+    unified-lint-rule "^1.0.3"
+    unist-util-to-list-of-char "^0.1.1"
 
 remark-lint-strong-marker@^1.0.2:
   version "1.0.2"
@@ -10932,7 +11037,7 @@ unified-engine@^6.0.0:
     x-is-string "^0.1.0"
     xtend "^4.0.1"
 
-unified-lint-rule@^1.0.0:
+unified-lint-rule@^1.0.0, unified-lint-rule@^1.0.3:
   version "1.0.3"
   resolved "http://registry.npm.taobao.org/unified-lint-rule/download/unified-lint-rule-1.0.3.tgz#e302b0c4a7ac428c0980e049a500e59528001299"
   dependencies:
@@ -11058,6 +11163,25 @@ unist-util-select@^1.5.0:
 unist-util-stringify-position@^1.0.0, unist-util-stringify-position@^1.1.1, unist-util-stringify-position@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/unist-util-stringify-position/-/unist-util-stringify-position-1.1.2.tgz#3f37fcf351279dcbca7480ab5889bb8a832ee1c6"
+
+unist-util-to-list-of-char@^0.1.1:
+  version "0.1.1"
+  resolved "http://registry.npm.taobao.org/unist-util-to-list-of-char/download/unist-util-to-list-of-char-0.1.1.tgz#2659ed54e524c6ded8734c39f32faef738d23449"
+  dependencies:
+    unist-util-visit "^1.4.0"
+
+unist-util-to-list-of-char@^0.1.2:
+  version "0.1.2"
+  resolved "http://registry.npm.taobao.org/unist-util-to-list-of-char/download/unist-util-to-list-of-char-0.1.2.tgz#0bf702e093028a58078600ebb5e2a4a2cf58f0ae"
+  dependencies:
+    unist-util-visit "^1.4.0"
+
+unist-util-to-string-with-nodes@^0.1.0:
+  version "0.1.0"
+  resolved "http://registry.npm.taobao.org/unist-util-to-string-with-nodes/download/unist-util-to-string-with-nodes-0.1.0.tgz#b5808935ad4df061a2219db1b2ea1317758fc560"
+  dependencies:
+    unified-lint-rule "^1.0.3"
+    unist-util-to-list-of-char "^0.1.2"
 
 unist-util-visit-children@^1.0.0:
   version "1.1.2"
