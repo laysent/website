@@ -1,7 +1,7 @@
 ---
 title: Random Sampling
 date: '2019-02-19'
-modified: '2019-02-28'
+modified: '2019-03-11'
 tags: Algorithm, Math
 category: Algorithm
 description: >-
@@ -42,14 +42,14 @@ function getRandomNumber(min: number, max: number) {
   return Math.floor(Math.random() * ((max + 1) - min)) + min;
 }
 
-function swap<T>(array: Array<T>, i: number, j: number) {
+function swap<T>(array: T[], i: number, j: number) {
   if (i === j) return;
   const temp = array[i];
   array[i] = array[j];
   array[j] = temp;
 }
 
-function shuffle<T>(array: Array<T>, num: number = array.length): Array<T> {
+function shuffle<T>(array: T[], num: number = array.length): T[] {
   /**
    * 复制一份，避免对参数做修改
    */
@@ -123,7 +123,7 @@ function getRandomNumber(min: number, max: number) {
 class Reservoir<T> {
   size: number = 0;      // 需要选取的总量
   total: number = 0;     // 目前为止处理过的总量
-  result: Array<T> = []; // 当前结果
+  result: T[] = []; // 当前结果
   constructor(size: number) {
     this.size = size;
   }
@@ -266,7 +266,7 @@ interface component<T> {
   weight: number;
 }
 
-function shuffle<T>(array: Array<component<T>>, num: number = array.length): Array<T> {
+function shuffle<T>(array: component<T>[], num: number = array.length): T[] {
   return array
     /**
      * 根据公式计算每一个元素的 key 值

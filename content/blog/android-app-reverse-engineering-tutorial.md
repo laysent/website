@@ -1,7 +1,7 @@
 ---
 title: Android App 逆向工程初探
 date: 2019-01-20
-modified: 2019-02-10
+modified: 2019-03-11
 tags: Android, Reverse Engineering
 category: Android
 description: 这篇文章主要讲关于如何逆向某 Android 程序，并找到网络请求中 querstring 里 signature 计算方法的过程
@@ -228,7 +228,9 @@ public static String b(String paramString)
   {
     Mac localMac = Mac.getInstance("HmacSHA256");
     localMac.init(new SecretKeySpec(key.getBytes("UTF-8"), "HmacSHA256"));
-    return new String(Base64.encodeBase64(localMac.doFinal(paramString.getBytes("UTF-8"))));
+    return new String(
+      Base64.encodeBase64(localMac.doFinal(paramString.getBytes("UTF-8")))
+    );
   }
   catch (Exception localException)
   {

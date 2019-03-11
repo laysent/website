@@ -1,7 +1,7 @@
 ---
 title: Subresource Integrity
 date: 2019-01-06
-modified: 2019-02-10
+modified: 2019-03-11
 tags: Web, JavaScript
 category: Web
 description: Subresource Integrity (SRI) 的基本用法、目的、行为，以及配合 Preload，Prefetch 等一同使用时的注意事项
@@ -86,7 +86,7 @@ crypto.createHash('sha256').update(content, 'utf8').digest('base64');
 如果不在 HTTP 头中带这一条，也可以在 HTML 中增加如下的代码，能达到同样的效果：
 
 ```html
-<meta http-equiv="Content-Security-Policy" content="require-sri-for script style">
+<meta http-equiv=Content-Security-Policy content="require-sri-for script style">
 ```
 
 这个 HTTP 头的校验功能，在当前版本（Chrome 70）中还未被默认打开。这意味着，即使请求带有以上任何一种 HTTP 头，Chrome 也不会对 HTML 中引用的资源文件做强制校验。当 Chrome 监测到以上的任意一种 HTTP 头之后，会在 console 中输出：

@@ -1,7 +1,7 @@
 ---
 title: 使用 N-API 移植现有 C 语言库
 date: 2019-01-19
-modified: 2019-02-10
+modified: 2019-03-11
 tags: Node.js, JavaScript
 category: Node.js
 description: 如何使用 N-API 与 node-gyp，将一个现有的 C 语言库移植为 Node.js 可直接运行的 C/C++ 插件
@@ -223,7 +223,7 @@ void *output; // 待转化的数组
 napi_status status;
 napi_value result;
 
-status = napi_create_buffer_copy(env, size, output, NULL/* 复制后数据的头指针 */, &result);
+status = napi_create_buffer_copy(env, size, output, NULL/* 复制后的头指针 */, &result);
 assert(status == napi_ok);
 
 return result;
