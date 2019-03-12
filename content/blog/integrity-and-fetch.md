@@ -1,7 +1,7 @@
 ---
 title: integrity & fetch
 date: '2019-03-07'
-modified: '2019-03-07'
+modified: '2019-03-12'
 tags: 'JavaScript, Web'
 category: Web
 description: >-
@@ -84,7 +84,12 @@ const ImageComponent =
             /**
              * React.lazy 需要返回的值是 { default: React.Component } 格式
              */
-            default: (props) => <img src={url} alt={props.alt} {...props} />,
+            default: (props) => {
+              React.useEffect(() => () => {
+                URL.revokeObjectURL(url);
+              }, []);
+              return <img src={url} alt={props.alt} {...props} />;
+            },
           }),
           error => ({
             default: () => <div>Error: {error.toString()}</div>
