@@ -1,7 +1,7 @@
 ---
 title: Html5 的旁注标记
 date: '2019-03-16'
-modified: '2019-03-16'
+modified: '2019-03-19'
 tags: Web
 category: Web
 description: 本文主要介绍了 HTML5 中的旁注标记 ruby 及其使用
@@ -9,9 +9,9 @@ description: 本文主要介绍了 HTML5 中的旁注标记 ruby 及其使用
 
 ## Furigana
 
-在日语漫画中，经常看到<ruby>注音假名<rp>(<rt>Furigana</rt><rp>)</rp></ruby>，也被称为振假名或<ruby>ルビー<rt>Ruby</rt></ruby>。根据 [wiki](https://zh.wikipedia.org/wiki/%E6%8C%AF%E5%81%87%E5%90%8D) 的解释，Ruby 一词主要源自英国对 5.5 号字体的传统称呼（和编程语言 Ruby 无关），因此有时候印刷物的注音假名也被称作<ruby>ルビ<rp>(</rp><rt>Ruby</rt><rp>)</rp></ruby>。
+在日语漫画中，经常看到{注音假名}^(Furigana)，也被称为振假名或{ルビー}^(Ruby)。根据 [wiki](https://zh.wikipedia.org/wiki/%E6%8C%AF%E5%81%87%E5%90%8D) 的解释，Ruby 一词主要源自英国对 5.5 号字体的传统称呼（和编程语言 Ruby 无关），因此有时候印刷物的注音假名也被称作{ルビ}^(Ruby)。
 
-除了一般的注音功能之外，日语中也常用注音假名来给汉字赋予新的含义。比如：<ruby>紳士<rp>(</rp><rt>hentai</rt><rp>)</rp></ruby>这个梗，写作绅士，但读作 Hentai。
+除了一般的注音功能之外，日语中也常用注音假名来给汉字赋予新的含义。比如：{紳士}^(hentai)这个梗，写作绅士，但读作 Hentai。
 
 旁注标记就是这种表意文字的音标印刷方式，广泛地运用于东亚文字中，如中文或日文。一般这些字是放于表意文字的上方或右边，作为文字的拼音或注解。
 
@@ -145,4 +145,12 @@ description: 本文主要介绍了 HTML5 中的旁注标记 ruby 及其使用
 
 `ruby-align` 是 CSS 中的一个属性，同样处于草案阶段。根据目前给出的[定义](https://drafts.csswg.org/css-ruby/#rubypos)，该属性可以配置的值有四种，分别是 `start`，`center`，`space-between` 和 `space-around`。
 
-这里几个属性的具体效果，可以参考 `flex` 中，`justify-content` 的属性展示效果。在对应基础文字的总宽度内，旁注文字可以选择<ruby>前对齐<rp>(</rp><rt>start</rt><rp>)</rp></ruby>，<ruby>居中<rp>(</rp><rt>center</rt><rp>)</rp></ruby>，<ruby>旁注间空白均匀分布<rp>(</rp><rt>space-between</rt><rp>)</rp></ruby>或<ruby>旁注每个元素均匀分配空间<rp>(</rp><rt>space-around</rt><rp>)</rp></ruby>。
+这里几个属性的具体效果，可以参考 `flex` 中，`justify-content` 的属性展示效果。在对应基础文字的总宽度内，旁注文字可以选择{前对齐}^(start)，{居中}^(center)，{旁注间空白均匀分布}^(space-between)或{旁注每个元素均匀分配空间}^(space-around)。
+
+## remark-ruby
+
+考虑到 `ruby` 的书写比较的繁琐，在 Markdown 中如果使用 HTML 的方式直接书写，多少有些麻烦（特别是每次还要加上 `rp` 的部分）。因此，写了一个简单的库 [remark-ruby](https://github.com/laysent/remark-ruby)，用于增加一个额外的 Markdown 语法，方便这种旁注的书写。
+
+简单来说，只需要在 Markdown 中写 `{文字}^(旁注)`，插件就会生成 `<ruby>文字<rp>(</rp><rt>旁注</rt><rp>)</rp></ruby>` 这样的 HTML 内容。其中，`rp` 的部分可以通过插件配置自定义。
+
+目前的浏览器暂时对 `rb` 这类的标签支持还少，因此暂时插件只做了简单的功能。等到浏览器有了更好的支持之后，未来也可以考虑对语法做进一步的扩展。例如，可以考虑增加诸如 `{文字}^(上旁注 1)^(上旁注 2)_(下旁注)` 这样的语法来支持多个旁注（需要 `ruby-position` 的支持），同时用 `{[文][字]}^([旁][注])` 这样的语法来支持旁注的区块划分（需要 `rb` 的支持）。
