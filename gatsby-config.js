@@ -92,6 +92,9 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
-    `gatsby-plugin-meta-redirect`,
+    // redirection of pages is currently not necessary any more.
+    // comment out for now.
+    // still keeps this configuration here as it might be used later some day.
+    // `gatsby-plugin-meta-redirect`,
   ].filter(_ => _),
 }

@@ -6,7 +6,7 @@ function urlTransform(text) {
 }
 
 exports.createPages = ({ graphql, actions }) => {
-  const { createPage, createRedirect } = actions
+  const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const categoryComponent = path.resolve(`./src/templates/category.js`)
@@ -53,11 +53,6 @@ exports.createPages = ({ graphql, actions }) => {
           previous,
           next,
         },
-      })
-      createRedirect({
-        fromPath: post.node.fields.slug,
-        toPath: `/post${post.node.fields.slug}`,
-        isPermanent: true,
       })
     })
 
