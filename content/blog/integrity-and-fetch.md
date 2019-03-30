@@ -1,7 +1,7 @@
 ---
 title: integrity & fetch
 date: '2019-03-07'
-modified: '2019-03-12'
+modified: '2019-03-30'
 tags: 'JavaScript, Web'
 category: Web
 description: >-
@@ -33,7 +33,9 @@ fetch('resource url', { integrity: 'sha256-xxxx', mode: 'cors' });
 
 这里，`integrity` 提供的格式，与 Subresource Integrity 在 HTML tag 中使用的格式是相同的，前半部分是具体安全散列算法的名称，后半部分是算法计算出的结果。
 
-同时，需要注意到的是，除了 `integrity` 属性之外，对于跨域请求来说，`mode` 属性也是必须的。这是因为，对于跨域请求来说，如果需要浏览器去判断 `integrity` 是否是正确的，那么就需要浏览器去访问具体的资源内容。对于跨域请求来说，默认这种资源访问是不被允许的，因此需要显示得指定允许跨域资源访问。当然，这就需要第三方服务器显示得允许资源访问。
+同时，需要注意到的是，除了 `integrity` 属性之外，对于跨域请求来说，`mode` 属性也是必须的。这是因为，对于跨域请求来说，如果需要浏览器去判断 `integrity` 是否是正确的，那么就需要浏览器去访问具体的资源内容。对于跨域请求来说，默认这种资源访问是不被允许的，因此需要显示得指定允许跨域资源访问。当然，这就需要第三方服务器明确允许资源访问。
+
+更具体来说，integrity 的检查只能在 response type 是 `basic`，`cors` 或 `default` 的时候才能进行。其中，`basic` 是同域的情况，`cors` 是对方服务器允许跨域的情况，而 `default` 是 Service Worker 生成的合法 Response。除了这三种情况外，其他的情况下浏览器是不会做 integrity 检查的。
 
 至此，如果请求资源与给定的 `integrity` 不符合，`fetch` 请求会报错，否则就可以拿到正确的 `Response`，`integrity` 检查完成。
 
