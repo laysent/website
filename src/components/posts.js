@@ -12,11 +12,10 @@ function urlTransform(text) {
 class Posts extends React.Component {
   render() {
     const { data, title } = this.props
-    const siteTitle = data.site.siteMetadata.title
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title="LaySent's Blog">
         <SEO
           title={title}
           keywords={['JavaScript', 'Web', 'Blog', 'LaySent']}
@@ -35,7 +34,7 @@ class Posts extends React.Component {
                   marginBottom: rhythm(1 / 4),
                 }}
               >
-                <Link style={{ boxShadow: `none` }} to={`post${node.fields.slug}`}>
+                <Link style={{ boxShadow: `none` }} to={`blog/post${node.fields.slug}`}>
                   {title}
                 </Link>
               </h3>
@@ -44,7 +43,7 @@ class Posts extends React.Component {
               {hasCategory && (
                 <small>
                   {` • `}
-                  <Link style={{ boxShadow: `none` }} to={`/category/${urlTransform(node.frontmatter.category)}/`}>
+                  <Link style={{ boxShadow: `none` }} to={`/blog/category/${urlTransform(node.frontmatter.category)}/`}>
                     {node.frontmatter.category}
                   </Link>
                 </small>
@@ -54,7 +53,7 @@ class Posts extends React.Component {
                 {` • `}
                 {node.frontmatter.tags.split(',').map((tag, i, tags) => (
                   <React.Fragment key={tag}>
-                    <Link style={{ boxShadow: `none`, color: '#ffb600' }} to={`/tag/${urlTransform(tag)}/`}>
+                    <Link style={{ boxShadow: `none`, color: '#ffb600' }} to={`/blog/tag/${urlTransform(tag)}/`}>
                       #{tag.trim()}
                     </Link>
                     {i !== tags.length - 1 && ` / `}

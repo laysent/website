@@ -6,10 +6,10 @@ import { rhythm, scale } from '../utils/typography'
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
-    const rootPath = `${__PATH_PREFIX__}/`
+    const blogRootPath = `${__PATH_PREFIX__}/blog`
     let header
 
-    if (location.pathname === rootPath) {
+    if (location.pathname === blogRootPath) {
       header = (
         <header>
           <h1
@@ -46,7 +46,7 @@ class Layout extends React.Component {
                 textDecoration: `none`,
                 color: `inherit`,
               }}
-              to={`/`}
+              to={`/blog`}
             >
               {title}
             </Link>
