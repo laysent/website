@@ -5,7 +5,7 @@ import { rhythm, scale } from '../utils/typography'
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { location, title, children, subtitle } = this.props
     const blogRootPath = `${__PATH_PREFIX__}/blog`
     let header
 
@@ -66,6 +66,18 @@ class Layout extends React.Component {
         itemType="http://schema.org/Blog"
       >
         {header}
+        {subtitle && (
+          <header>
+            <h1
+              style={{
+                boxShadow: `none`,
+                textDecoration: `underline`,
+              }}
+            >
+              {subtitle}
+            </h1>
+          </header>
+        )}
         {children}
         <footer>
           <span>© </span>

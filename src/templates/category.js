@@ -9,6 +9,7 @@ class CategoryTemplate extends React.Component {
       <Posts
         {...this.props}
         title={`${this.props.pageContext.category} Posts`}
+        subtitle={this.props.pageContext.category}
       />
     )
   }

@@ -11,11 +11,11 @@ function urlTransform(text) {
 
 class Posts extends React.Component {
   render() {
-    const { data, title } = this.props
+    const { data, title, subtitle } = this.props
     const posts = data.allMarkdownRemark.edges
 
     return (
-      <Layout location={this.props.location} title="LaySent's Blog">
+      <Layout location={this.props.location} title="LaySent's Blog" subtitle={subtitle}>
         <SEO
           title={title}
           keywords={['JavaScript', 'Web', 'Blog', 'LaySent']}

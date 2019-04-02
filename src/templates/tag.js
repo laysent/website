@@ -9,6 +9,7 @@ class TagTemplate extends React.Component {
       <Posts
         {...this.props}
         title={`#${this.props.pageContext.tag}`}
+        subtitle={`#${this.props.pageContext.tag}`}
       />
     )
   }
