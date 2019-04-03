@@ -5,9 +5,52 @@ function urlTransform(text) {
   return text.replace(/ /g, '-').replace(/\./g, '').toLowerCase();
 }
 
-exports.createPages = ({ graphql, actions }) => {
-  const { createPage } = actions
+function createDailyPages(graphql, createPage) {
+  const dailyTemplate = path.resolve(`./src/templates/daily-per-month.js`)
+  return graphql(
+    `
+      {
+        allMarkdownRemark(
+          sort: { fields: [frontmatter___date], order: DESC }
+          filter: { fields: { type: { eq: "daily" } } }
+        ) {
+          edges {
+            node {
+              frontmatter {
+                date(formatString: "YYYY-MM")
+              }
+            }
+          }
+        }
+      }
+    `
+  ).then(result => {
+    if (result.errors) {
+      throw result.errors
+    }
 
+    const dailys = result.data.allMarkdownRemark.edges
+    const dates = [...new Set(dailys.map(daily => daily.node.frontmatter.date))]
+
+    dates.forEach((date, index) => {
+      const [ year, month ] = date.split('-')
+      const previous = index === dates.length - 1 ? null : dates[index + 1]
+      const next = index === 0 ? null : dates[index - 1]
+      createPage({
+        path: `/daily/${year}/${month}`,
+        component: dailyTemplate,
+        context: {
+          glob: `${date}-*`,
+          time: date,
+          previous,
+          next,
+        },
+      })
+    })
+  })
+}
+
+function createPostPages(graphql, createPage) {
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const categoryComponent = path.resolve(`./src/templates/category.js`)
   const tagComponent = path.resolve(`./src/templates/tag.js`)
@@ -17,11 +60,13 @@ exports.createPages = ({ graphql, actions }) => {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
+          filter: { fields: { type: { ne: "daily" } } }
         ) {
           edges {
             node {
               fields {
                 slug
+                type
               }
               frontmatter {
                 title
@@ -93,15 +138,31 @@ exports.createPages = ({ graphql, actions }) => {
   })
 }
 
+exports.createPages = ({ graphql, actions }) => {
+  const { createPage } = actions
+
+  return Promise.all([
+    createPostPages(graphql, createPage),
+    createDailyPages(graphql, createPage),
+  ])
+}
+
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
+    const { dir } = path.parse(node.fileAbsolutePath);
+    const { name } = path.parse(dir);
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,
       node,
       value,
+    })
+    createNodeField({
+      name: `type`,
+      node,
+      value: name,
     })
   }
 }

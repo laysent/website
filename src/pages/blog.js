@@ -25,6 +25,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
+      filter: { fields: { type: { ne: "daily" } } }
     ) {
       edges {
         node {
