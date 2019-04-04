@@ -76,7 +76,7 @@
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
     "deploy": "yarn build && gh-pages -d public",
     "draft": "node ./cli/draft.js",
-    "publish": "node ./cli/post.js"
+    "post": "node ./cli/post.js"
   },
   "husky": {
     "hooks": {
