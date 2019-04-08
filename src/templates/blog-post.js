@@ -53,7 +53,7 @@ class BlogPostTemplate extends React.Component {
             }}
           />
           <footer>
-            <div class="license" style={{ marginBottom: rhythm(1), fontSize: rhythm(0.5) }}>
+            <div className="license" style={{ marginBottom: rhythm(1), fontSize: rhythm(0.5) }}>
               <a
                 rel="license noopener noreferrer"
                 href="http://creativecommons.org/licenses/by-nc/4.0/"
