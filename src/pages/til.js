@@ -2,9 +2,9 @@ import React from 'react'
 import { Link, graphql } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import DailyPosts from '../components/daily'
+import TilPosts from '../components/til'
 
-class Daily extends React.Component {
+class Til extends React.Component {
   render() {
     const { data } = this.props;
     const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
@@ -16,13 +16,13 @@ class Daily extends React.Component {
     }
 
     return (
-      <Layout location={this.props.location} title="LaySent" subtitle="What did I learn today">
+      <Layout location={this.props.location} title="LaySent" subtitle="Things I Learned">
         <SEO
           title={this.props.data.site.siteMetadata.title}
           keywords={['JavaScript', 'Web', 'Blog', 'LaySent']}
           location={this.props.location}
         />
-        <DailyPosts nodes={nodes} />
+        <TilPosts nodes={nodes} />
         <nav>
           <ul
             style={{
@@ -34,7 +34,7 @@ class Daily extends React.Component {
             }}
           >
             <li>
-              {more && <Link to={`daily/${more.replace('-', '/')}`} rel="more">
+              {more && <Link to={`til/${more.replace('-', '/')}`} rel="more">
                 ← {more}
               </Link>}
             </li>
@@ -46,7 +46,7 @@ class Daily extends React.Component {
   }
 }
 
-export default Daily;
+export default Til;
 
 export const pageQuery = graphql`
   query {
@@ -57,7 +57,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fields: { type: { eq: "daily" } } }
+      filter: { fields: { type: { eq: "til" } } }
       limit: 10
     ) {
       edges {

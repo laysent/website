@@ -4,11 +4,11 @@ const fs = require('fs');
 const path = require('path');
 const utils = require('./utils');
 
-const daily = path.resolve(__dirname, '..', 'content/daily');
+const til = path.resolve(__dirname, '..', 'content/til');
 const suffix = '.md';
 
 function getExistingCategories() {
-  const categories = utils.getAllDailyFrontMatter()
+  const categories = utils.getAllTILFrontMatter()
     .map(parsed => parsed.data.category)
     .filter(Boolean)
     .map(category => category.trim())
@@ -23,12 +23,12 @@ prompts([
   {
     type: 'text',
     name: 'title',
-    message: 'specify the title of this daily tip',
+    message: 'specify the title of this TIL',
   },
   {
     type: 'select',
     name: 'category',
-    message: 'choose the category for this daily tip',
+    message: 'choose the category for this TIL',
     choices: [
       { title: '[New/None]', value: '' }
     ].concat(getExistingCategories()),
@@ -42,11 +42,11 @@ prompts([
 ]).then((result) => {
   const category = result.newCategory || result.category || '';
   let filename = result.title.split(' ').join('-') + suffix;
-  let filepath = path.resolve(daily, filename);
+  let filepath = path.resolve(til, filename);
   let index = 2;
   while (fs.existsSync(filepath)) {
     filename = result.title.split(' ').join('-') + '-' + index + suffix;
-    filepath = path.resolve(daily, filename);
+    filepath = path.resolve(til, filename);
     index += 1;  
   }
   const dateStr = utils.getTodayStr();
@@ -57,5 +57,5 @@ prompts([
     category,
   });
   fs.writeFileSync(filepath, content, 'utf8');
-  console.log(`Daily tip has been created at ${filepath}`);
+  console.log(`TIL has been created at ${filepath}`);
 });

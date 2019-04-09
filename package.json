@@ -77,7 +77,7 @@
     "deploy": "yarn build && gh-pages -d public",
     "draft": "node ./cli/draft.js",
     "post": "node ./cli/post.js",
-    "daily": "node ./cli/daily.js"
+    "til": "node ./cli/til.js"
   },
   "husky": {
     "hooks": {

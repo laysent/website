@@ -4,7 +4,7 @@ const matter = require('gray-matter');
 
 const postsDir = path.resolve(__dirname, '..', 'content/blog');
 const draftsDir = path.resolve(__dirname, '..', 'content/draft');
-const dailyDir = path.resolve(__dirname, '..', 'content/daily');
+const tilDir = path.resolve(__dirname, '..', 'content/til');
 const suffix = '.md';
 
 function getAllFrontMatterFromDir(dir) {
@@ -21,7 +21,7 @@ function getAllFrontMatterFromDir(dir) {
 
 const getAllPostsFrontMatter = getAllFrontMatterFromDir.bind(null, postsDir);
 const getAllDraftsFrontMatter = getAllFrontMatterFromDir.bind(null, draftsDir);
-const getAllDailyFrontMatter = getAllFrontMatterFromDir.bind(null, dailyDir);
+const getAllTILFrontMatter = getAllFrontMatterFromDir.bind(null, tilDir);
 
 function getTodayStr() {
   const today = new Date();
@@ -35,7 +35,7 @@ function getTodayStr() {
 module.exports = {
   getAllPostsFrontMatter,
   getAllDraftsFrontMatter,
-  getAllDailyFrontMatter,
+  getAllTILFrontMatter,
   postsDir,
   draftsDir,
   suffix,

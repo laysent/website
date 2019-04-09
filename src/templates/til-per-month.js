@@ -2,9 +2,9 @@ import React from 'react'
 import { graphql, Link } from 'gatsby'
 import Layout from '../components/Layout'
 import SEO from '../components/seo'
-import DailyPosts from '../components/daily'
+import TilPosts from '../components/til'
 
-const DailyPerMonthTemplate = ({ data, location, pageContext }) => {
+const TilPerMonthTemplate = ({ data, location, pageContext }) => {
   const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
   const { previous, next } = pageContext
 
@@ -12,14 +12,14 @@ const DailyPerMonthTemplate = ({ data, location, pageContext }) => {
     <Layout
       location={location}
       title="LaySent"
-      subtitle={`What did I learn today (${pageContext.time})`}
+      subtitle={`Things I Learned (${pageContext.time})`}
     >
       <SEO
         title={data.site.siteMetadata.title}
         keywords={['JavaScript', 'Web', 'Blog', 'LaySent']}
         location={location}
       />
-      <DailyPosts nodes={nodes} />
+      <TilPosts nodes={nodes} />
       <nav>
         <ul
           style={{
@@ -32,18 +32,18 @@ const DailyPerMonthTemplate = ({ data, location, pageContext }) => {
         >
           <li>
             {previous && (
-              <Link to={`daily/${previous.replace('-', '/')}`} rel="prev">
+              <Link to={`til/${previous.replace('-', '/')}`} rel="prev">
                 ← {previous}
               </Link>
             )}
           </li>
           <li>
             {next ? (
-              <Link to={`daily/${next.replace('-', '/')}`} rel="next">
+              <Link to={`til/${next.replace('-', '/')}`} rel="next">
                 {next} →
               </Link>
             ) : (
-              <Link to="daily" rel="latest">
+              <Link to="/til" rel="latest">
                 Latest
               </Link>
             )}
@@ -54,10 +54,10 @@ const DailyPerMonthTemplate = ({ data, location, pageContext }) => {
   );
 }
 
-export default DailyPerMonthTemplate
+export default TilPerMonthTemplate
 
 export const pageQuery = graphql`
-  query DailyPerMonth($glob: String!) {
+  query TilPerMonth($glob: String!) {
     site {
       siteMetadata {
         title
@@ -65,7 +65,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: ASC }
-      filter: { fields: { type: { eq: "daily" } } frontmatter: { date: { glob: $glob } } }
+      filter: { fields: { type: { eq: "til" } } frontmatter: { date: { glob: $glob } } }
     ) {
       edges {
         node {

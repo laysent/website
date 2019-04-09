@@ -5,14 +5,14 @@ function urlTransform(text) {
   return text.replace(/ /g, '-').replace(/\./g, '').toLowerCase();
 }
 
-function createDailyPages(graphql, createPage) {
-  const dailyTemplate = path.resolve(`./src/templates/daily-per-month.js`)
+function createTILPages(graphql, createPage) {
+  const tilTemplate = path.resolve(`./src/templates/til-per-month.js`)
   return graphql(
     `
       {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
-          filter: { fields: { type: { eq: "daily" } } }
+          filter: { fields: { type: { eq: "til" } } }
         ) {
           edges {
             node {
@@ -29,16 +29,16 @@ function createDailyPages(graphql, createPage) {
       throw result.errors
     }
 
-    const dailys = result.data.allMarkdownRemark.edges
-    const dates = [...new Set(dailys.map(daily => daily.node.frontmatter.date))]
+    const things = result.data.allMarkdownRemark.edges
+    const dates = [...new Set(things.map(thing => thing.node.frontmatter.date))]
 
     dates.forEach((date, index) => {
       const [ year, month ] = date.split('-')
       const previous = index === dates.length - 1 ? null : dates[index + 1]
       const next = index === 0 ? null : dates[index - 1]
       createPage({
-        path: `/daily/${year}/${month}`,
-        component: dailyTemplate,
+        path: `/til/${year}/${month}`,
+        component: tilTemplate,
         context: {
           glob: `${date}-*`,
           time: date,
@@ -60,7 +60,7 @@ function createPostPages(graphql, createPage) {
         allMarkdownRemark(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
-          filter: { fields: { type: { ne: "daily" } } }
+          filter: { fields: { type: { ne: "til" } } }
         ) {
           edges {
             node {
@@ -143,7 +143,7 @@ exports.createPages = ({ graphql, actions }) => {
 
   return Promise.all([
     createPostPages(graphql, createPage),
-    createDailyPages(graphql, createPage),
+    createTILPages(graphql, createPage),
   ])
 }
 

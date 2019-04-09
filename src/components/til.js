@@ -1,7 +1,7 @@
 import React from 'react'
 import { rhythm } from '../utils/typography'
 
-const Daily = ({ nodes }) => (
+const TIL = ({ nodes }) => (
   <main>
     {nodes.map((node) => (
       <article key={node.id}>
@@ -26,4 +26,4 @@ const Daily = ({ nodes }) => (
   </main>
 );
 
-export default Daily
+export default TIL
