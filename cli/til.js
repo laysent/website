@@ -41,15 +41,15 @@ prompts([
   },
 ]).then((result) => {
   const category = result.newCategory || result.category || '';
-  let filename = result.title.split(' ').join('-') + suffix;
+  const dateStr = utils.getTodayStr();
+  let filename = dateStr + suffix;
   let filepath = path.resolve(til, filename);
   let index = 2;
   while (fs.existsSync(filepath)) {
-    filename = result.title.split(' ').join('-') + '-' + index + suffix;
+    filename = dateStr + '-' + index.toString().padStart(2, '0') + suffix;
     filepath = path.resolve(til, filename);
     index += 1;  
   }
-  const dateStr = utils.getTodayStr();
 
   const content = matter.stringify('\n', {
     title: result.title,
