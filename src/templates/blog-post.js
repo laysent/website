@@ -98,7 +98,7 @@ class BlogPostTemplate extends React.Component {
                 <a
                   href="https://github.com/laysent/blog/tree/gh-pages"
                   target="_blank"
-                  ref="noopener noreferrer"
+                  rel="noopener noreferrer"
                 >
                   github.com/laysent/blog
                 </a>
