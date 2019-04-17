@@ -1,7 +1,7 @@
 ---
 title: Web 应用的 Alias 配置
 date: '2019-04-16'
-modified: '2019-04-16'
+modified: '2019-04-17'
 tags: 'Tools, JavaScript'
 category: Tools
 description: 本文主要介绍一个 JavaScript / TypeScript 项目中，可以用到的各种 alias 配置
@@ -95,3 +95,18 @@ description: 本文主要介绍一个 JavaScript / TypeScript 项目中，可以
 ```
 
 这里需要用到一个库，[`eslint-import-resolver-webpack`](https://www.npmjs.com/package/eslint-import-resolver-webpack)。该库会读取指定的 Webpack config 文件，根据其中的配置来同步 Webpack 和 ESLint 中对 alias 的设置。
+
+对于没有使用 Webpack 的工程，也可以使用 [`eslint-import-resolver-custom-alias`](https://www.npmjs.com/package/eslint-import-resolver-custom-alias) 来达到类似的效果：
+
+```json
+{
+  "import/resolver": {
+    "eslint-import-resolver-custom-alias": {
+      "alias": {
+        "@": "./src",
+        "css": "./css"
+      }
+    }
+  }
+}
+```
