@@ -20,13 +20,13 @@ class BlogPostTemplate extends React.Component {
   }
   render() {
     const post = this.props.data.markdownRemark
-    const siteTitle = this.props.data.site.siteMetadata.title
+    const blogTitle = this.props.data.site.siteMetadata.blogTitle
     const { previous, next } = this.props.pageContext
     const { date, modified, title, description } = post.frontmatter;
 
     const hasBeenModified = modified && (modified !== date);
     return (
-      <Layout location={this.props.location} title={siteTitle}>
+      <Layout location={this.props.location} title={blogTitle} to="/blog/">
         <SEO title={title} description={description} location={this.props.location} />
         <article itemScope itemType="http://schema.org/BlogPosting">
           <header>
@@ -150,7 +150,7 @@ export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
       siteMetadata {
-        title
+        blogTitle
         author
       }
     }

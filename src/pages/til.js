@@ -16,7 +16,7 @@ class Til extends React.Component {
     }
 
     return (
-      <Layout location={this.props.location} title="LaySent" subtitle="Things I Learned">
+      <Layout location={this.props.location} title="Home" subtitle="Things I Learned" isRoot to="/">
         <SEO
           title={this.props.data.site.siteMetadata.title}
           keywords={['JavaScript', 'Web', 'Blog', 'LaySent']}

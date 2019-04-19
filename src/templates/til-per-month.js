@@ -11,7 +11,8 @@ const TilPerMonthTemplate = ({ data, location, pageContext }) => {
   return (
     <Layout
       location={location}
-      title="LaySent"
+      title="Latest"
+      to="/til/"
       subtitle={`Things I Learned (${pageContext.time})`}
     >
       <SEO

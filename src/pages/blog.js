@@ -9,6 +9,7 @@ class BlogIndex extends React.Component {
       <Posts
         {...this.props}
         title="All posts"
+        isRoot
       />
     );
   }
