@@ -1,0 +1,84 @@
+.title {
+  font-family: "Abril Fatface", cursive;
+  text-align: center;
+  position: relative;
+  margin: 0;
+}
+
+.title span {
+  background-color: #fff;
+  position: relative;
+  padding: 0 1rem;
+}
+
+.title::before {
+  content: '';
+  height: 1px;
+  position: absolute;
+  background-color: #ccc;
+  width: 100%;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+nav.menu {
+  position: fixed;
+  top: 0;
+  right: 0;
+  line-height: 2;
+}
+
+nav.menu ul {
+  list-style: none;
+  display: flex;
+}
+
+nav.menu ul,
+nav.menu ul li {
+  margin: 0;
+}
+
+nav.menu ul li {
+  padding: 0 0.5rem;
+}
+
+nav.footer svg {
+  fill: #000;
+  width: 1rem;
+  height: 1rem;
+}
+
+nav.footer {
+  display: flex;
+  justify-content: space-around;
+  height: 100%;
+}
+
+nav.footer > div {
+  width: 200px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav.footer a {
+  border-radius: 50px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  text-decoration: none;
+  box-shadow: none;
+}
+
+nav.footer a:hover {
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.9);
+  background-color: #ce2323;
+  transition: all 0.5s ease-in-out;
+}

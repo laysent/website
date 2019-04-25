@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { rhythm } from '../utils/typography';
 import SEO from '../components/seo';
+import './homepage.css';
 
 class Homepage extends React.Component {
   render() {
