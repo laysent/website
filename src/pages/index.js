@@ -20,7 +20,7 @@ class Homepage extends React.Component {
         <nav className="menu">
           <ul>
             <li><Link to="/blog">Blog</Link></li>
-            <li><Link to="/til">Today I Learn</Link></li>
+            <li><Link to="/til">Things I Learn</Link></li>
           </ul>
         </nav>
         <main

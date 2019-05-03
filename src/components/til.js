@@ -6,13 +6,13 @@ const TIL = ({ nodes }) => (
   <main>
     {nodes.map((node) => (
       <article key={node.id}>
-        <h3
+        <h1
           style={{
             marginBottom: rhythm(1 / 4),
           }}
         >
           {node.frontmatter.title}
-        </h3>
+        </h1>
         <small><time dateTime={node.frontmatter.date}>{node.frontmatter.date}</time></small>
         {!!node.frontmatter.category && (
           <small>
