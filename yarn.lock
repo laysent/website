@@ -690,9 +690,9 @@
     lodash "^4.17.10"
     to-fast-properties "^2.0.0"
 
-"@laysent/remark-preset-lint@^0.1.5":
-  version "0.1.5"
-  resolved "http://registry.npm.taobao.org/@laysent/remark-preset-lint/download/@laysent/remark-preset-lint-0.1.5.tgz#2d49535ab3dcdcccfc6e005a53c4eff791a92ab3"
+"@laysent/remark-preset-lint@^0.1.7":
+  version "0.1.7"
+  resolved "https://registry.npm.taobao.org/@laysent/remark-preset-lint/download/@laysent/remark-preset-lint-0.1.7.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2F%40laysent%2Fremark-preset-lint%2Fdownload%2F%40laysent%2Fremark-preset-lint-0.1.7.tgz#490e71af09f06f9d6b46a864580eb060cb5f09cf"
   dependencies:
     remark-lint "^6.0.4"
     remark-lint-blockquote-indentation "^1.0.2"
@@ -741,7 +741,7 @@
     remark-lint-no-multiple-toplevel-headings "^1.0.2"
     remark-lint-no-paragraph-content-indent "^1.0.5"
     remark-lint-no-reference-like-url "^1.0.3"
-    remark-lint-no-repeat-punctuation "^0.1.1"
+    remark-lint-no-repeat-punctuation "^0.1.3"
     remark-lint-no-shell-dollars "^1.0.2"
     remark-lint-no-shortcut-reference-image "^1.0.2"
     remark-lint-no-shortcut-reference-link "^1.0.3"
@@ -9368,11 +9368,12 @@ remark-lint-no-reference-like-url@^1.0.3:
     unist-util-generated "^1.1.0"
     unist-util-visit "^1.4.0"
 
-remark-lint-no-repeat-punctuation@^0.1.1:
-  version "0.1.1"
-  resolved "http://registry.npm.taobao.org/remark-lint-no-repeat-punctuation/download/remark-lint-no-repeat-punctuation-0.1.1.tgz#3f0b8fe9ac7d9187974553044179a9cea29e9cc9"
+remark-lint-no-repeat-punctuation@^0.1.3:
+  version "0.1.3"
+  resolved "https://registry.npm.taobao.org/remark-lint-no-repeat-punctuation/download/remark-lint-no-repeat-punctuation-0.1.3.tgz?cache=0&other_urls=https%3A%2F%2Fregistry.npm.taobao.org%2Fremark-lint-no-repeat-punctuation%2Fdownload%2Fremark-lint-no-repeat-punctuation-0.1.3.tgz#c69c709f91c413cd9a1f005773954d3dbd6d032c"
   dependencies:
     unified-lint-rule "^1.0.3"
+    unist-util-map "^1.0.4"
     unist-util-to-list-of-char "^0.1.2"
 
 remark-lint-no-shell-dollars@^1.0.2:
@@ -11165,6 +11166,12 @@ unist-util-inspect@^4.1.2:
 unist-util-is@^2.0.0, unist-util-is@^2.1.2:
   version "2.1.2"
   resolved "http://registry.npm.taobao.org/unist-util-is/download/unist-util-is-2.1.2.tgz#1193fa8f2bfbbb82150633f3a8d2eb9a1c1d55db"
+
+unist-util-map@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.npm.taobao.org/unist-util-map/download/unist-util-map-1.0.4.tgz#f27bb03e14e8072171379d132c96c1dfcea44574"
+  dependencies:
+    object-assign "^4.0.1"
 
 unist-util-modify-children@^1.0.0:
   version "1.1.3"
