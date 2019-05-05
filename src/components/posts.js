@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import Layout from './Layout'
+import Layout from './layout'
 import SEO from './seo'
 import { rhythm } from '../utils/typography'
 
