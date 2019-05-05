@@ -5,7 +5,7 @@ import License from '../components/license';
 const TIL = ({ nodes }) => (
   <main>
     {nodes.map((node) => (
-      <article key={node.id}>
+      <article key={node.id} itemScope itemType="http://schema.org/BlogPosting">
         <h1
           style={{
             marginBottom: rhythm(1 / 4),
@@ -13,14 +13,21 @@ const TIL = ({ nodes }) => (
         >
           {node.frontmatter.title}
         </h1>
-        <small><time dateTime={node.frontmatter.date}>{node.frontmatter.date}</time></small>
+        <small>
+          <time itemProp="datePublished" dateTime={node.frontmatter.date}>
+            {node.frontmatter.date}
+          </time>
+        </small>
         {!!node.frontmatter.category && (
           <small>
             {` • `}
             {node.frontmatter.category}
           </small>
         )}
-        <p dangerouslySetInnerHTML={{ __html: node.html }} />
+        <small>
+          <span itemScope itemType="http://schema.org/Person" itemProp="author"> • by <span itemProp="name">LaySent</span></span>
+        </small>
+        <div dangerouslySetInnerHTML={{ __html: node.html }} itemProp="articleBody" />
         <hr />
       </article>
     ))}
