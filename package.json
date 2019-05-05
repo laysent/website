@@ -67,7 +67,7 @@
   "scripts": {
     "dev": "gatsby develop",
     "lint:js": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "lint:md": "remark content/blog/*.md -fq",
+    "lint:md": "remark content/blog/*.md content/til/*.md -fq",
     "lint": "npm run lint:js && npm run lint:md",
     "format": "prettier --trailing-comma es5 --no-semi --single-quote --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
