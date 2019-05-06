@@ -74,7 +74,7 @@
     "start": "npm run develop",
     "build": "gatsby build --prefix-paths",
     "fix-semi": "eslint --quiet --ignore-pattern node_modules --ignore-pattern public --parser babel-eslint --no-eslintrc --rule '{\"semi\": [2, \"never\"], \"no-extra-semi\": [2]}' --fix gatsby-node.js",
-    "deploy": "yarn build && gh-pages -d public",
+    "deploy": "yarn build && gh-pages -d public -b master -r https://github.com/laysent/laysent.github.io.git",
     "draft": "node ./cli/draft.js",
     "post": "node ./cli/post.js",
     "til": "node ./cli/til.js"
