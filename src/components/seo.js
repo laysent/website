@@ -10,7 +10,8 @@ function SEO({ description, lang, meta, keywords, title, location }) {
       render={data => {
         const metaDescription =
           description || data.site.siteMetadata.description
-        const href = data.site.siteMetadata.siteUrl + location.pathname.substr(data.site.pathPrefix.length + 1);
+        let canonical = data.site.siteMetadata.siteUrl + location.pathname.substr(data.site.pathPrefix.length + 1);
+        if (canonical[canonical.length - 1] !== '/') canonical += '/'
         return (
           <Helmet
             htmlAttributes={{
@@ -62,7 +63,7 @@ function SEO({ description, lang, meta, keywords, title, location }) {
               )
               .concat(meta)}
           >
-            <link href={href} rel="canonical" />
+            <link href={canonical} rel="canonical" />
           </Helmet>
         )
       }}
