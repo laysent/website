@@ -8,15 +8,16 @@ const TilPerMonthTemplate = ({ data, location, pageContext }) => {
   const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
   const { previous, next } = pageContext
 
+  const headTitle = `Things I Learned (${pageContext.time})`;
   return (
     <Layout
       location={location}
       title="Latest"
       to="/til/"
-      subtitle={`Things I Learned (${pageContext.time})`}
+      subtitle={headTitle}
     >
       <SEO
-        title={data.site.siteMetadata.title}
+        title={headTitle}
         keywords={['JavaScript', 'Web', 'Blog', 'LaySent']}
         location={location}
       />
