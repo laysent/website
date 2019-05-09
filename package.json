@@ -1,11 +1,11 @@
 {
-  "name": "laysent-blog",
+  "name": "laysent-website",
   "private": true,
-  "description": "Blog where laysent writes thoughts.",
+  "description": "Blog where LaySent writes thoughts.",
   "version": "1.0.0",
   "author": "LaySent <laysent@gmail.com>",
   "bugs": {
-    "url": "https://github.com/laysent/blog/issues"
+    "url": "https://github.com/laysent/website/issues"
   },
   "dependencies": {
     "gatsby": "^2.0.76",
@@ -54,15 +54,16 @@
     "remark-frontmatter": "^1.3.1",
     "staged-git-files": "^1.1.2"
   },
-  "homepage": "https://laysent.github.io/blog",
+  "homepage": "https://laysent.github.io/website",
   "keywords": [
-    "blog"
+    "blog",
+    "website"
   ],
   "license": "MIT",
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/laysent/blog.git"
+    "url": "git+https://github.com/laysent/website.git"
   },
   "scripts": {
     "dev": "gatsby develop",
