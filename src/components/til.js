@@ -13,20 +13,22 @@ const TIL = ({ nodes }) => (
         >
           {node.frontmatter.title}
         </h1>
-        <small>
-          <time itemProp="datePublished" dateTime={node.frontmatter.date}>
-            {node.frontmatter.date}
-          </time>
-        </small>
-        {!!node.frontmatter.category && (
+        <p>
           <small>
-            {` • `}
-            {node.frontmatter.category}
+            <time itemProp="datePublished" dateTime={node.frontmatter.date}>
+              {node.frontmatter.date}
+            </time>
           </small>
-        )}
-        <small>
-          <span itemScope itemType="http://schema.org/Person" itemProp="author"> • by <span itemProp="name">LaySent</span></span>
-        </small>
+          {!!node.frontmatter.category && (
+            <small>
+              {` • `}
+              {node.frontmatter.category}
+            </small>
+          )}
+          <small>
+            <span itemScope itemType="http://schema.org/Person" itemProp="author"> • by <span itemProp="name">LaySent</span></span>
+          </small>
+        </p>
         <div dangerouslySetInnerHTML={{ __html: node.html }} itemProp="articleBody" />
         <hr />
       </article>
