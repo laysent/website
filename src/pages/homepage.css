@@ -11,6 +11,12 @@
   padding: 0 1rem;
 }
 
+@media (prefers-color-scheme: dark) {
+  .title span {
+    background-color: #333;
+  }
+}
+
 .title::before {
   content: '';
   height: 1px;
@@ -81,13 +87,4 @@ nav.footer a:hover {
   color: rgba(255, 255, 255, 0.9);
   background-color: #ce2323;
   transition: all 0.5s ease-in-out;
-}
-
-@media (prefers-color-scheme: dark) {
-  .title span {
-    background-color: #333;
-  }
-  .title::before {
-    background-color: #000;
-  }
 }

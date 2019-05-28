@@ -33,6 +33,19 @@ Wordpress2016.overrideThemeStyles = () => {
     h1: {
       fontFamily: Wordpress2016.bodyFontFamily.map(JSON.stringify).join(','),
     },
+    '@media (prefers-color-scheme: dark)': {
+      body: {
+        color: '#fff',
+        backgroundColor: '#333',
+      },
+      blockquote: {
+        borderLeftColor: 'hsla(0,0%,100%,0.9)',
+        color: 'hsla(0,0%,100%,0.59)',
+      },
+      hr: {
+        backgroundColor: 'hsla(0,0%,100%,0.2)',
+      }
+    },
   };
 }
 
