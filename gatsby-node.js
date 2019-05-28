@@ -40,7 +40,8 @@ function createTILPages(graphql, createPage) {
         path: `/til/${year}/${month}`,
         component: tilTemplate,
         context: {
-          glob: `${date}-*`,
+          startInMonth: `${year}-${month}-01`,
+          endInMonth: `${year}-${month}-31`,
           time: date,
           previous,
           next,

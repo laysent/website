@@ -59,7 +59,7 @@ const TilPerMonthTemplate = ({ data, location, pageContext }) => {
 export default TilPerMonthTemplate
 
 export const pageQuery = graphql`
-  query TilPerMonth($glob: String!) {
+  query TilPerMonth($startInMonth: Date!, $endInMonth: Date!) {
     site {
       siteMetadata {
         title
@@ -67,7 +67,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { fields: { type: { eq: "til" } } frontmatter: { date: { glob: $glob } } }
+      filter: { fields: { type: { eq: "til" } } frontmatter: { date: { gte: $startInMonth, lte: $endInMonth } } }
     ) {
       edges {
         node {
