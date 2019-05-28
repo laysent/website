@@ -130,6 +130,48 @@ module.exports = {
             `,
             output: '/blog/rss.xml',
             title: 'LaySent\'s Blog',
+            match: '^/blog'
+          },
+          {
+            serialize({ query: { site, allMarkdownRemark }}) {
+              return allMarkdownRemark.edges.map(edge => {
+                const date = edge.node.frontmatter.date;
+                const [ year, month ] = date.split('-');
+                const link = site.siteMetadata.siteUrl + 'til/' + year + '/' + month;
+                const hash = edge.node.fields.slug.replace(/\//g, '');
+                const url = link + '#' + hash;
+                return Object.assign({}, edge.node.frontmatter, {
+                  description: edge.node.frontmatter.description,
+                  date,
+                  url,
+                  guid: url,
+                  custom_elements: [{ "content:encoded": edge.node.html }],
+                });
+              });
+            },
+            query: `
+              {
+                allMarkdownRemark(
+                  sort: { order: DESC, fields: [frontmatter___date] },
+                  filter: { fields: { type: { eq: "til" } } },
+                ) {
+                  edges {
+                    node {
+                      html
+                      fields { slug }
+                      frontmatter {
+                        title
+                        date
+                        description
+                      }
+                    }
+                  }
+                }
+              }
+            `,
+            output: '/til/rss.xml',
+            title: 'Things I Learn (LaySent)',
+            match: '^/til'
           },
         ],
       },
