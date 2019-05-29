@@ -1,7 +1,7 @@
 ---
 title: Baseline & Progressive JPEG
 date: '2019-03-13'
-modified: '2019-03-13'
+modified: '2019-05-29'
 tags: 'Web, Graphics'
 category: Web
 description: 主要介绍了 Web 中使用 Baseline 和 Progressive JPEG 的特点以及图片间的转化方式
@@ -9,7 +9,7 @@ description: 主要介绍了 Web 中使用 Baseline 和 Progressive JPEG 的特�
 
 ## 表现区别
 
-<video controls="controls" height="100%" poster="https://cloudinary-res.cloudinary.com/video/upload/non_progressive_vs_progressive_jpeg.jpg" preload="none" style="margin: 0 auto;display: block" width="100%">
+<video controls="controls" height="100%" poster="https://cloudinary-res.cloudinary.com/video/upload/non_progressive_vs_progressive_jpeg.jpg" preload="none" width="100%">
   <source src="https://cloudinary-res.cloudinary.com/video/upload/non_progressive_vs_progressive_jpeg.webm" type="video/webm">
   <source src="https://cloudinary-res.cloudinary.com/video/upload/non_progressive_vs_progressive_jpeg.mp4" type="video/mp4">
   <source src="https://cloudinary-res.cloudinary.com/video/upload/non_progressive_vs_progressive_jpeg.ogv" type="video/ogg">
