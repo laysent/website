@@ -1,7 +1,7 @@
 ---
 title: Git Commit Message
 date: '2019-03-24'
-modified: '2019-03-24'
+modified: '2019-05-29'
 tags: Tools
 category: Tools
 description: 介绍 Git Commit Message 规范与实践
@@ -19,7 +19,7 @@ description: 介绍 Git Commit Message 规范与实践
 
 当一份解释性 Git Commit Message 包含足够的信息，那么就可以用于快速地搜索、定位改动。例如下面地命令可以查找出所有和聊天相关地新功能改动：
 
-```sh
+```bash
 git log HEAD --grep feat(chat)
 ```
 
@@ -116,7 +116,7 @@ Git 提供了 Commit Template 配置，可以在每次写 Git Commit Message 的
 
 安装
 
-```sh
+```bash
 yarn add --dev @commitlint/config-conventional @commitlint/cli
 ```
 
@@ -134,7 +134,7 @@ module.exports = {
 
 安装
 
-```sh
+```bash
 yarn add --dev husky
 ```
 
