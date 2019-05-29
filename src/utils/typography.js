@@ -33,6 +33,15 @@ Wordpress2016.overrideThemeStyles = () => {
     h1: {
       fontFamily: Wordpress2016.bodyFontFamily.map(JSON.stringify).join(','),
     },
+    h4: {
+      textTransform: 'initial',
+    },
+    'audio[controls]': {
+      marginBottom: '1.75rem',
+    },
+    'video[controls]': {
+      marginBottom: '1.75rem',
+    },
     '@media (prefers-color-scheme: dark)': {
       body: {
         color: '#fff',
@@ -44,6 +53,12 @@ Wordpress2016.overrideThemeStyles = () => {
       },
       hr: {
         backgroundColor: 'hsla(0,0%,100%,0.2)',
+      },
+      th: {
+        borderBottomColor: 'hsla(0,0%,100%,0.12)',
+      },
+      td: {
+        borderBottomColor: 'hsla(0,0%,100%,0.12)',
       }
     },
   };
