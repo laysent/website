@@ -27,7 +27,7 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { frontmatter:  { category: { eq: $category } } }
+      filter: { frontmatter:  { category: { eq: $category } }, fields: { type: { ne: "til" } } }
     ) {
       edges {
         node {
