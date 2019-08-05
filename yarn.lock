@@ -772,10 +772,10 @@
     signedsource "^1.0.0"
     yargs "^9.0.0"
 
-"@laysent/remark-preset-lint@^0.1.7":
-  version "0.1.7"
-  resolved "https://registry.npm.taobao.org/@laysent/remark-preset-lint/download/@laysent/remark-preset-lint-0.1.7.tgz#490e71af09f06f9d6b46a864580eb060cb5f09cf"
-  integrity sha1-SQ5xrwnwb51rRqhkWA6wYMtfCc8=
+"@laysent/remark-preset-lint@^0.1.8":
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/@laysent/remark-preset-lint/-/remark-preset-lint-0.1.8.tgz#f2ab4b50cb267ddc0fcab165631ab2786bdbffcf"
+  integrity sha512-cmoFOhPQWjsb0NGln0nkID6RI02kpOJ1jXtzDHwfvDsNqG7ruxrkZFtoz330h0cYJMnsijBxXb3rdV2gsfbzqw==
   dependencies:
     remark-lint "^6.0.4"
     remark-lint-blockquote-indentation "^1.0.2"
@@ -819,7 +819,7 @@
     remark-lint-no-heading-punctuation "^1.0.2"
     remark-lint-no-inline-padding "^1.0.3"
     remark-lint-no-literal-urls "^1.0.2"
-    remark-lint-no-long-code "^0.1.0"
+    remark-lint-no-long-code "^0.1.1"
     remark-lint-no-missing-blank-lines "^1.0.2"
     remark-lint-no-multiple-toplevel-headings "^1.0.2"
     remark-lint-no-paragraph-content-indent "^1.0.5"
@@ -10808,10 +10808,10 @@ remark-lint-no-literal-urls@^1.0.2:
     unist-util-position "^3.0.0"
     unist-util-visit "^1.1.1"
 
-remark-lint-no-long-code@^0.1.0:
-  version "0.1.0"
-  resolved "https://registry.npm.taobao.org/remark-lint-no-long-code/download/remark-lint-no-long-code-0.1.0.tgz#e66d24600460606224c0c498cfc004ad223efec9"
-  integrity sha1-5m0kYARgYGIkwMSYz8AErSI+/sk=
+remark-lint-no-long-code@^0.1.1:
+  version "0.1.1"
+  resolved "https://registry.yarnpkg.com/remark-lint-no-long-code/-/remark-lint-no-long-code-0.1.1.tgz#e3f53b064db27a99b25abe284d0c4e765132b0d8"
+  integrity sha512-yNb+tPZW+gYspc7CiJXGIRdFZLYrRopKi2rRNuM12Ns/8pe6dwsEq1L2vLHPn804CBZIEoprhuI/zbuxw9tdxw==
   dependencies:
     unified-lint-rule "^1.0.3"
     unist-util-visit "^1.4.0"
