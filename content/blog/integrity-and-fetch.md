@@ -1,7 +1,7 @@
 ---
 title: integrity & fetch
 date: '2019-03-07'
-modified: '2019-03-30'
+modified: '2019-08-05'
 tags: 'JavaScript, Web'
 category: Web
 description: >-
@@ -21,7 +21,7 @@ description: >-
 
 `fetch` 的 API 格式如下：
 
-```plain
+```text
 Promise<Response> fetch(input[, init]);
 ```
 

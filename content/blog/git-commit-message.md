@@ -1,7 +1,7 @@
 ---
 title: Git Commit Message
 date: '2019-03-24'
-modified: '2019-05-29'
+modified: '2019-08-05'
 tags: Tools
 category: Tools
 description: 介绍 Git Commit Message 规范与实践
@@ -27,7 +27,7 @@ git log HEAD --grep feat(chat)
 
 一份[约定式提交](https://www.conventionalcommits.org/zh/v1.0.0-beta.3/)大概结构如下：
 
-```plain
+```text
 <类型>[可选的作用域]: <描述>
 <空行>
 [可选的正文]
@@ -66,7 +66,7 @@ Git 提供了 Commit Template 配置，可以在每次写 Git Commit Message 的
 
 为了配置 Git Commit Temlate，首先在个人目录下生成 `.gitmessage` 文件，参考内容如下：
 
-```plain
+```text
 
 # <type>[optional scope]: <description>
 # build/chore/ci/docs/feat/fix/perf/refactor/revert/style/test
@@ -101,7 +101,7 @@ Git 提供了 Commit Template 配置，可以在每次写 Git Commit Message 的
 
 接下来，配置个人目录下的 `.gitconfig` 文件，增加：
 
-```plain
+```text
 [commit]
   template = ~/.gitmessage
 ```
