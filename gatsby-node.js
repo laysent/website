@@ -149,11 +149,12 @@ exports.createPages = ({ graphql, actions }) => {
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
+  const content = path.resolve(__dirname, 'content');
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const { dir } = path.parse(node.fileAbsolutePath);
-    const { name } = path.parse(dir);
+    const relative = path.relative(content, node.fileAbsolutePath);
+    const folder = relative.split('/')[0];
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,
@@ -163,7 +164,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     createNodeField({
       name: `type`,
       node,
-      value: name,
+      value: folder,
     })
   }
 }
