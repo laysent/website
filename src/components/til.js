@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import { rhythm } from '../utils/typography'
 import License from '../components/license';
 
@@ -36,7 +37,9 @@ class TIL extends React.Component {
               {!!node.frontmatter.category && (
                 <small>
                   {` • `}
-                  {node.frontmatter.category}
+                  <Link to={`/til/category/${node.frontmatter.category.toLowerCase()}`}>
+                    {node.frontmatter.category}
+                  </Link>
                 </small>
               )}
               <small>

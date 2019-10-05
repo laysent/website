@@ -7,6 +7,7 @@ function urlTransform(text) {
 
 function createTILPages(graphql, createPage) {
   const tilTemplate = path.resolve(`./src/templates/til-per-month.js`)
+  const tilCategoryTemplate = path.resolve(`./src/templates/til-category.js`)
   return graphql(
     `
       {
@@ -17,6 +18,7 @@ function createTILPages(graphql, createPage) {
           edges {
             node {
               frontmatter {
+                category
                 date(formatString: "YYYY-MM")
               }
             }
@@ -46,6 +48,17 @@ function createTILPages(graphql, createPage) {
           previous,
           next,
         },
+      })
+    })
+
+    const categories = [...new Set(things.map(thing => thing.node.frontmatter.category))]
+    categories.forEach((category) => {
+      createPage({
+        path: `/til/category/${category.toLowerCase()}`,
+        component: tilCategoryTemplate,
+        context: {
+          category
+        }
       })
     })
   })
