@@ -186,6 +186,11 @@ pre[data-line] {
   flex-shrink: 0;
 }
 
+a.no-link-style {
+  box-shadow: none;
+  color: inherit;
+}
+
 .license > div {
   margin-left: 10px;
 }

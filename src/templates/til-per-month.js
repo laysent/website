@@ -3,6 +3,7 @@ import { graphql, Link } from 'gatsby'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import TilPosts from '../components/til'
+import Helmet from 'react-helmet'
 
 const TilPerMonthTemplate = ({ data, location, pageContext }) => {
   const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
@@ -20,6 +21,14 @@ const TilPerMonthTemplate = ({ data, location, pageContext }) => {
         title={headTitle}
         keywords={['JavaScript', 'Web', 'Blog', 'LaySent']}
         location={location}
+      />
+      <Helmet
+        meta={[
+          {
+            name: `robots`,
+            content: `noindex`
+          }
+        ]}
       />
       <TilPosts nodes={nodes} />
       <nav>
