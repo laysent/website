@@ -18,13 +18,6 @@ module.exports = {
         name: `blog`,
       },
     },
-    process.env.NODE_ENV === 'production' ? undefined : {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        path: `${__dirname}/content/draft`,
-        name: `draft`,
-      },
-    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -183,7 +176,7 @@ module.exports = {
         short_name: `LaySent`,
         start_url: `/blog`,
         background_color: `#ffffff`,
-        theme_color: `#007acc`,
+        theme_color: `#339af0`,
         display: `minimal-ui`,
         icon: `content/assets/icon.png`,
       },
