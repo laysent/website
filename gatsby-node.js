@@ -57,14 +57,24 @@ function createTILPages(graphql, createPage) {
       })
     })
 
-    things.forEach(til => {
+    things.forEach((til, index) => {
       const { date, title } = til.node.frontmatter
+      const previous = index === things.length - 1 ? null : {
+        time: things[index + 1].node.frontmatter.date,
+        title: things[index + 1].node.frontmatter.title
+      }
+      const next = index === 0 ? null : {
+        time: things[index - 1].node.frontmatter.date,
+        title: things[index - 1].node.frontmatter.title
+      }
       createPage({
         path: `/til/${date}_${title.toLowerCase().replace(/ /g, '-')}`,
         component: tilPage,
         context: {
           time: date,
-          title
+          title,
+          previous,
+          next
         }
       })
     })
