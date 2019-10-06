@@ -1,6 +1,7 @@
 const prompts = require('prompts');
 const matter = require('gray-matter');
 const fs = require('fs');
+const fse = require('fs-extra');
 const path = require('path');
 const utils = require('./utils');
 
@@ -42,8 +43,9 @@ prompts([
 ]).then((result) => {
   const category = result.newCategory || result.category || '';
   const dateStr = utils.getTodayStr();
+  const folderName = dateStr.split('-').slice(0, 2).join('-');
   let filename = dateStr + suffix;
-  let filepath = path.resolve(til, filename);
+  let filepath = path.resolve(til, folderName, filename);
   let index = 2;
   while (fs.existsSync(filepath)) {
     filename = dateStr + '-' + index.toString().padStart(2, '0') + suffix;
@@ -56,6 +58,7 @@ prompts([
     date: dateStr,
     category,
   });
+  fse.ensureFileSync(filepath);
   fs.writeFileSync(filepath, content, 'utf8');
   console.log(`TIL has been created at ${filepath}`);
 });

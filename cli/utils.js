@@ -1,6 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const matter = require('gray-matter');
+const glob = require('glob');
 
 const postsDir = path.resolve(__dirname, '..', 'content/blog');
 const draftsDir = path.resolve(__dirname, '..', 'content/draft');
@@ -8,8 +9,7 @@ const tilDir = path.resolve(__dirname, '..', 'content/til');
 const suffix = '.md';
 
 function getAllFrontMatterFromDir(dir) {
-  return fs.readdirSync(dir)
-    .filter(filename => filename.endsWith(suffix))
+  return glob.sync('**/*.md', { cwd: dir })
     .map((filename) => {
       const filepath = path.resolve(dir, filename);
       const content = fs.readFileSync(filepath, 'utf8');
