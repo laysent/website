@@ -12,12 +12,16 @@ class TilPost extends React.Component {
             marginBottom: rhythm(1 / 4),
           }}
         >
+          {title}
           {
-            withLink ?
-            <Link to={`/til/${date}_${title.toLowerCase().replace(/ /g, '-')}`} className="no-link-style">
-              {title}
-            </Link> :
-            title
+            withLink &&
+            <Link
+              to={`/til/${date}_${title.toLowerCase().replace(/ /g, '-')}`}
+              className="no-link-style"
+              style={{ fontSize: rhythm(1 / 2), marginLeft: rhythm(1 / 2) }}
+            >
+              🔗
+            </Link>
           }
         </h1>
         <p>
