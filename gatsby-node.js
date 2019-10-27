@@ -2,7 +2,7 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 function urlTransform(text) {
-  return text.replace(/ /g, '-').replace(/\./g, '').toLowerCase();
+  return text.replace(/ /g, '-').replace(/\./g, '').toLowerCase()
 }
 
 function createTILPages(graphql, createPage) {
@@ -35,9 +35,9 @@ function createTILPages(graphql, createPage) {
 
     const things = result.data.allMarkdownRemark.edges
     const dates = [...new Set(things.map(thing => {
-      const date = thing.node.frontmatter.date;
-      const [year, month] = date.split('-');
-      return `${year}-${month}`;
+      const date = thing.node.frontmatter.date
+      const [year, month] = date.split('-')
+      return `${year}-${month}`
     }))]
 
     dates.forEach((date, index) => {
@@ -190,12 +190,12 @@ exports.createPages = ({ graphql, actions }) => {
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
-  const content = path.resolve(__dirname, 'content');
+  const content = path.resolve(__dirname, 'content')
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const relative = path.relative(content, node.fileAbsolutePath);
-    const folder = relative.split('/')[0];
+    const relative = path.relative(content, node.fileAbsolutePath)
+    const folder = relative.split('/')[0]
     const value = createFilePath({ node, getNode })
     createNodeField({
       name: `slug`,

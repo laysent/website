@@ -1,3 +1,5 @@
+const extraLinks = require('./extra-links');
+
 module.exports = {
   pathPrefix: `/`,
   siteMetadata: {
@@ -189,6 +191,24 @@ module.exports = {
         pathToConfigModule: `src/utils/typography`,
       },
     },
+    `gatsby-plugin-robots-txt`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.edges.map(edge => {
+            return {
+              url: site.siteMetadata.siteUrl + edge.node.path,
+              changefreq: `daily`,
+              priority: 0.7,
+            }
+          }).concat(extraLinks.map(url => ({
+            url: site.siteMetadata.siteUrl + url,
+            changefreq: 'daily',
+            priority: 0.7,
+          }))),
+      },
+    }
     // redirection of pages is currently not necessary any more.
     // comment out for now.
     // still keeps this configuration here as it might be used later some day.

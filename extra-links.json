@@ -1,0 +1,14 @@
+[
+  "/sri-hash-generator",
+  "/subresource-integrity-demo/content-security-policy.html",
+  "/subresource-integrity-demo/index.html",
+  "/subresource-integrity-demo/integrity-and-fetch.html",
+  "/subresource-integrity-demo/integrity-and-prefetch-next.html",
+  "/subresource-integrity-demo/integrity-and-prefetch.html",
+  "/subresource-integrity-demo/integrity-and-preload.html",
+  "/subresource-integrity-demo/integrity-with-multiple-hashes.html",
+  "/subresource-integrity-demo/integrity.html",
+  "/subresource-integrity-demo/service-worker/integrity-with-service-worker-and-embedded-resource.html",
+  "/subresource-integrity-demo/service-worker/integrity-with-service-worker-and-inserted-resource.html"
+
+]
