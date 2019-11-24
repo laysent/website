@@ -49,8 +49,8 @@ prompts([
   let index = 2;
   while (fs.existsSync(filepath)) {
     filename = dateStr + '-' + index.toString().padStart(2, '0') + suffix;
-    filepath = path.resolve(til, filename);
-    index += 1;  
+    filepath = path.resolve(til, folderName, filename);
+    index += 1;
   }
 
   const content = matter.stringify('\n', {
