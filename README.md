@@ -2,7 +2,7 @@
 
 Personal blog, forked from [Gatsby blog starter](https://github.com/gatsbyjs/gatsby-starter-blog).
 
-View [here](https://laysent.github.io/blog).
+View [here](https://laysent.com/).
 
 ## Development
 

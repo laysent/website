@@ -7,7 +7,7 @@ module.exports = {
     blogTitle: `LaySent's Blog`,
     author: `LaySent`,
     description: `Site where LaySent writes thoughts.`,
-    siteUrl: `https://laysent.github.io/`,
+    siteUrl: `https://laysent.com/`,
     social: {
       twitter: `laysent`,
     },

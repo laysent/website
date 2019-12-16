@@ -46,11 +46,11 @@ const License = () => (
       }, 'GitHub')}
       <span>. You can see the source code of this blog site at </span>
       <a
-        href="https://github.com/laysent/laysent.github.io"
+        href="https://github.com/laysent/website"
         target="_blank"
         rel="noopener noreferrer"
       >
-        github.com/laysent/laysent.github.io
+        github.com/laysent/website
       </a>
       <span>.</span>
     </div>
