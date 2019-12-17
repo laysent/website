@@ -10,10 +10,13 @@ class Til extends React.Component {
     const { data } = this.props;
     const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
     let more
+    let isCurrentMonth = false;
     if (nodes.length > 0) {
       const latest = nodes[0].frontmatter.date
       const [ year, month ] = latest.split('-')
       more = `${year}-${month}`
+      const now = new Date()
+      isCurrentMonth = (now.getFullYear() === year) && (now.getMonth() + 1 === month)
     }
 
     return (
@@ -25,11 +28,11 @@ class Til extends React.Component {
         />
         <Helmet
           meta={[
-            {
+            isCurrentMonth && {
               name: `robots`,
               content: `noindex`
             }
-          ]}
+          ].filter(Boolean)}
         />
         <TilPosts nodes={nodes} />
         <nav>
