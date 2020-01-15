@@ -42,7 +42,10 @@ prompts([
   },
 ]).then((result) => {
   const category = result.newCategory || result.category || '';
-  const dateStr = utils.getTodayStr();
+  let dateStr = utils.getTodayStr();
+  if (typeof process.argv[2] === 'string' && process.argv[2].split('-').length === 3) {
+    dateStr = process.argv[2];
+  }
   const folderName = dateStr.split('-').slice(0, 2).join('-');
   let filename = dateStr + suffix;
   let filepath = path.resolve(til, folderName, filename);
