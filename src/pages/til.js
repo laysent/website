@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link, graphql } from 'gatsby'
-import Helmet from 'react-helmet'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import TilPosts from '../components/til'
@@ -25,14 +24,6 @@ class Til extends React.Component {
           title="Things I Learn"
           keywords={['JavaScript', 'Web', 'Blog', 'LaySent']}
           location={this.props.location}
-        />
-        <Helmet
-          meta={[
-            isCurrentMonth && {
-              name: `robots`,
-              content: `noindex`
-            }
-          ].filter(Boolean)}
         />
         <TilPosts nodes={nodes} />
         <nav>
