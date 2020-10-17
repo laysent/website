@@ -41,6 +41,7 @@ class Til extends React.Component {
                 ← {more}
               </Link>}
             </li>
+            <li><Link to="/til/table-of-contents" rel="toc">Table of Contents</Link></li>
             <li></li>
           </ul>
         </nav>

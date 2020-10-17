@@ -10,6 +10,13 @@ function getTilPostLink(date, title) {
   return `/til/${date}_${title.toLowerCase().replace(/ /g, '-')}`;
 }
 
+const linkStyle = {
+  width: '33%',
+  textOverflow: 'ellipsis',
+  overflow: 'hidden',
+  whiteSpace: 'nowrap',
+}
+
 class TilPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -45,16 +52,19 @@ class TilPostTemplate extends React.Component {
               padding: 0,
             }}
           >
-            <li>
+            <li style={linkStyle}>
               {previous && (
-                <Link to={getTilPostLink(previous.time, previous.title)} rel="prev">
+                <Link to={getTilPostLink(previous.time, previous.title)} rel="prev" title={previous.title}>
                   ← {previous.title}
                 </Link>
               )}
             </li>
-            <li>
+            <li style={{ ...linkStyle, textAlign: 'center' }}>
+              <Link to="/til/table-of-contents" rel="toc" title="Table of Contents">Table of Contents</Link>
+            </li>
+            <li style={{ ...linkStyle, textAlign: 'right' }}>
               {next && (
-                <Link to={getTilPostLink(next.time, next.title)} rel="next">
+                <Link to={getTilPostLink(next.time, next.title)} rel="next" title={next.title}>
                   {next.title} →
                 </Link>
               )}

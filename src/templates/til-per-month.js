@@ -4,6 +4,13 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import TilPosts from '../components/til'
 
+const linkStyle = {
+  width: '33%',
+  textOverflow: 'ellipsis',
+  overflow: 'hidden',
+  whiteSpace: 'nowrap',
+}
+
 const TilPerMonthTemplate = ({ data, location, pageContext }) => {
   const nodes = data.allMarkdownRemark.edges.map(edge => edge.node);
   const { previous, next } = pageContext
@@ -27,19 +34,22 @@ const TilPerMonthTemplate = ({ data, location, pageContext }) => {
           style={{
             display: `flex`,
             flexWrap: `wrap`,
-            justifyContent: `space-between`,
+            justifyContent: `space-around`,
             listStyle: `none`,
             padding: 0,
           }}
         >
-          <li>
+          <li style={linkStyle}>
             {previous && (
               <Link to={`til/${previous.replace('-', '/')}`} rel="prev">
                 ← {previous}
               </Link>
             )}
           </li>
-          <li>
+          <li style={{ ...linkStyle, textAlign: 'center' }}>
+            <Link to="/til/table-of-contents" rel="toc" title="Table of Contents">Table of Contents</Link>
+          </li>
+          <li style={{ ...linkStyle, textAlign: 'right' }}>
             {next ? (
               <Link to={`til/${next.replace('-', '/')}`} rel="next">
                 {next} →
