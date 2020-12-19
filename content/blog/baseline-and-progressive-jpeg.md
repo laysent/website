@@ -1,7 +1,7 @@
 ---
 title: Baseline & Progressive JPEG
 date: '2019-03-13'
-modified: '2019-05-29'
+modified: '2020-12-19'
 tags: 'Web, Graphics'
 category: Web
 description: 主要介绍了 Web 中使用 Baseline 和 Progressive JPEG 的特点以及图片间的转化方式
@@ -172,7 +172,7 @@ img {
     }
   </style>
   <div style="background:repeating-linear-gradient(-45deg,#444 0,#444 80px,#333 80px,#333 160px);animation:gradient-move 2.5s linear 0s infinite;width:967px;height:500px;position:absolute;z-index:-1;top:0"></div>
-  <img src="../../baseline-jpeg-demo.jpeg" style="width:742px;height:500px;margin:0" id="demo" />
+  <img src="../../../baseline-jpeg-demo.jpeg" style="width:742px;height:500px;margin:0" id="demo" />
 </div>
 
 Firework, light, dark and night HD photo by Jez Timms ([@jeztimms](https://unsplash.com/@jeztimms)) on Unsplash. ([Source](https://unsplash.com/photos/r4lM2v9M84Q))
